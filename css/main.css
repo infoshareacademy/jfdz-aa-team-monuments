@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-color:#CCC;
+	padding-top: 50px;
+}
+
+.jumbotron {
+	background: #FFF url("../images/sample.png") center center;
+	background-size:cover;
+	display: flex;
+	height: 100%;
+	margin-bottom: 0;
+	padding-top: 15%;
+	padding-bottom: 20%;
+	}
+
+main {
+	background-color:#FFF;
+	padding: 15px 0;
+	}
+	
+section {
+	background-color:#999;
+	padding: 15px 0;
+	}
+
+footer{
+	background-color:#666;
+	padding: 15px 0;
+}
