@@ -5,7 +5,9 @@ body {
 	background-color:#CCC;
 	padding-top: 50px;
 }
-
+* {
+	box-sizing: border-box;
+}
 .jumbotron {
 	/* background: url("../images/main_image/1.jpg")no-repeat center; */
 	background-size: cover !important;
@@ -46,6 +48,7 @@ footer{
 	display: inline-block;
 	margin: 0 40px;
 	width: 333px;
+	vertical-align: top;
 }
 
 .about-box h3 {
@@ -61,4 +64,10 @@ footer{
 	height: 250px;
 	width: 250px;
 	border-radius: 50%;
+}
+
+.about-box-social {
+	width: 24px;
+	height: 24px;
+	display: inline-block;
 }
