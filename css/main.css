@@ -32,12 +32,33 @@ footer{
 	padding: 15px 0;
 }
 
-.about-us {
+.about {
 	text-align: center;
+	background-color: #E7E7E7;
+	padding: 60px 0;
 }
 
-.about-us div {
+.about h2 {
+	padding-bottom: 30px;
+}
+
+.about-box {
 	display: inline-block;
-	margin: 0 40px 0 40px;
-	width: 300px;
+	margin: 0 40px;
+	width: 333px;
+}
+
+.about-box h3 {
+	padding-bottom: 10px;
+}
+
+.about-box p {
+	font-size: 15px;
+	line-height: 28px;
+}
+
+.about-box-image {
+	height: 250px;
+	width: 250px;
+	border-radius: 50%;
 }
