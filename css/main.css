@@ -71,3 +71,11 @@ footer{
 	height: 24px;
 	display: inline-block;
 }
+
+.social-icons {
+	text-align: center;
+}
+
+.social-icons-link {
+	padding: 0 5px;
+}
