@@ -19,3 +19,4 @@ $(document).ready(function() {
   $(".jumbotron").fadeIn("slow").css('background', 'url("images/main_image/'+ bgiRandom +'")no-repeat center');
 
 });
+

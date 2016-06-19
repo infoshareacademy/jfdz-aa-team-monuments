@@ -29,10 +29,12 @@ section {
 	padding: 15px 0;
 	}
 
-footer{
+footer {
 	background-color:#666;
 	padding: 15px 0;
+
 }
+
 
 .about {
 	text-align: center;
@@ -79,3 +81,12 @@ footer{
 .social-icons-link {
 	padding: 0 5px;
 }
+.cookies {
+	background-color: ghostwhite;
+	text-align: center;
+	position: fixed;
+	bottom: 15px;
+	width: 100%;
+}
+
+
