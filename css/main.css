@@ -46,6 +46,12 @@ footer {
 	padding-bottom: 30px;
 }
 
+.about-team {
+	padding-bottom: 30px;
+	font-size: 15px;
+	line-height: 28px;
+}
+
 .about-box {
 	display: inline-block;
 	margin: 0 40px;
@@ -69,8 +75,8 @@ footer {
 }
 
 .about-box-social {
-	width: 24px;
-	height: 24px;
+	width: 32px;
+	height: 32px;
 	display: inline-block;
 }
 
