@@ -58,11 +58,17 @@ footer {
 	width: 333px;
 	vertical-align: top;
 }
+<<<<<<< Updated upstream
 
 .about-box a:hover {
 	text-decoration: none;
 }
 
+=======
+.about-box a:hover{
+	text-decoration: none;
+}
+>>>>>>> Stashed changes
 .about-box h3 {
 	padding-bottom: 10px;
 }
@@ -96,14 +102,20 @@ footer {
 	padding: 0 5px;
 	margin: 0 0 20px 0;
 }
+<<<<<<< Updated upstream
 
 
+=======
+.container a:hover{
+	text-decoration: none;
+}
+>>>>>>> Stashed changes
 .cookies {
+	margin-left: 5%;
 	background-color: ghostwhite;
-	text-align: center;
 	position: fixed;
 	bottom: 15px;
-	width: 100%;
+	width: 90%;
 }
 
 
