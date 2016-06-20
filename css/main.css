@@ -2,26 +2,49 @@
 /* CSS Document */
 
 body {
-	background-color:#CCC;
 	padding-top: 50px;
 }
-* {
-	box-sizing: border-box;
+
+nav {
+	box-shadow: rgba(13,11,11,0.8) 0 0 15px 0;
 }
-.jumbotron {
-	/* background: url("../images/main_image/1.jpg")no-repeat center; */
-	background-size: cover !important;
-    width: 100%;
-	display: flex;
-	margin-bottom: 0;
+
+nav li {
+	font-size: 16px;
+}
+
+/* Super Hyper Big Fat Teaser Image Style */
+.teaser {
+	width: 100%;
+	padding: 0;
+}
+
+.teaser-image {
+	background-position: center;
+	background-size: cover;
+	opacity: 0;
+	transition: opacity 1s linear;
+}
+
+.teaser-text {
 	padding-top: 15%;
-    padding-bottom: 20%;
+	padding-bottom: 25%;
 	color: #FFF;
 }
 
+.teaser-text h1 {
+	font-size: 48px;
+}
+
+.teaser-text p {
+	font-size: 18px;
+	font-weight: 300;
+}
+/* Super Hyper Big Fat Teaser Image Style ends here */
+
 main {
 	background-color:#FFF;
-	padding: 15px 0;
+	padding: 20px 0;
 	}
 	
 section {
@@ -34,7 +57,6 @@ footer {
 	padding: 15px 0;
 
 }
-
 
 .about {
 	text-align: center;
