@@ -14,7 +14,7 @@ $(document).ready(function() {
   // Navigation Toggle ends here
 
   // Main Teaser Image Random Switch/Animation starts here
-  var bgi = ["1.jpg", "2.jpg", "3.jpg"]; // images list
+  var bgi = ["1.jpg", "2.jpg", "3.jpg","4.jpg"]; // images list
   var bgiRandom = bgi[Math.floor(Math.random()*bgi.length)]; // random image select
 
   $(".teaser-image").css('background-image', 'url("images/main_image/' + bgiRandom + '")').animate({"opacity": "1"}, 150 );
