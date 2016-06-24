@@ -35,5 +35,21 @@ $(document).ready(function() {
   // });
   // MainMenu page scrolling ends here
 
+  // Cookies alert control starts here
+  var cookieList =  document.cookie.split(";");
+  for(var i = 0; i <cookieList.length; i++) {
+    var cookieElement = cookieList[i];
+    if (cookieElement == "cookies-note=xx") {//trzeba zmienić wartość ciasteczka na confirmed
+        $("#cookies-alert").hide();
+        return;
+    }
+  }
+
+  $("#cookies-confirm").on("click",function(){
+    document.cookie = "cookies-note=confirmed";
+    $("#cookies-alert").hide();
+    });
+  // Cookies alert control ends here
+    
 });
 
