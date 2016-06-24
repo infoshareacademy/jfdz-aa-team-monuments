@@ -5,11 +5,11 @@ body {
 	padding-top: 50px;
 }
 
-nav {
+.main-nav {
 	box-shadow: rgba(13,11,11,0.8) 0 0 15px 0;
 }
 
-nav li {
+.main-nav li {
 	font-size: 16px;
 }
 
@@ -109,6 +109,19 @@ footer {
 	height: 32px;
 	display: inline-block;
 }
+
+/* Form styles */
+.contact-form {
+	background-color: #E7E7E7;
+	border-radius: 5px;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+
+.form-field {
+	margin-top:10px;
+}
+/* Form styles ends here*/
 
 .social-icons {
 	text-align: center;
