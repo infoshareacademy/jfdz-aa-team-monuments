@@ -45,9 +45,9 @@ $(document).ready(function() {
     }
   }
 
-  $("#cookies-confirm").on("click",function(){
+  $("#cookies-confirm").on("click",function(){ // id diva
     document.cookie = "cookies-note=confirmed";
-    $("#cookies-alert").hide();
+    $("#cookies-alert").hide(); // id buttona
     });
   // Cookies alert control ends here
     
