@@ -3,6 +3,7 @@
 
 body {
 	padding-top: 50px;
+	font-family: 'Lato', sans-serif;
 }
 
 .main-nav {
@@ -11,7 +12,25 @@ body {
 
 .main-nav li {
 	font-size: 16px;
-    text-shadow:  rgba(0, 0, 0, 0.2) 0 0 3px;
+}
+
+.navbar-logo {
+	display: inline-block;
+	width: 87px;
+	height: 46px;
+	background: url("../images/gdansk.svg") no-repeat;
+	background-size: 87px 46px;
+	position: relative;
+	top: -13px;
+}
+
+.navbar-name {
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 8px;
+	color: #000;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
 }
 
 /* Super Hyper Big Fat Teaser Image Style */
@@ -147,6 +166,14 @@ footer {
 .back-icon img {
 	position: relative;
 	top: -2px;
+}
+
+.footer-link {
+	color: #1e1e1e;
+}
+
+.footer-link:hover {
+	color: #999999;
 }
 
 .container a:hover{
