@@ -112,7 +112,7 @@ footer {
 
 /* Form styles */
 .contact-form {
-	background-color: #E7E7E7;
+	background-color: #e7e7e7;
 	border-radius: 5px;
 	padding: 15px;
 	margin-bottom: 15px;
@@ -139,12 +139,17 @@ footer {
 .container a:hover{
 	text-decoration: none;
 }
+.copyright {
+	text-color:#1e1e1e;
+	text-align: center;
+}
+
 .cookies {
 	margin-left: 5%;
-	background-color: ghostwhite;
+	background-color: #ce9e83;
 	position: fixed;
 	bottom: 15px;
 	width: 90%;
+	z-index: 10;
 }
-
 
