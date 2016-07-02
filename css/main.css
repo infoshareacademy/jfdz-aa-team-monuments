@@ -11,6 +11,7 @@ body {
 
 .main-nav li {
 	font-size: 16px;
+    text-shadow:  rgba(0, 0, 0, 0.2) 0 0 3px;
 }
 
 /* Super Hyper Big Fat Teaser Image Style */
