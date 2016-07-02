@@ -19,27 +19,27 @@ $(document).ready(function() {
 
   $(".teaser-image").css('background-image', 'url("images/main_image/' + bgiRandom + '")').animate({"opacity": "1"}, 150 );
   // Main Teaser Image Random Switch/Animation ends here
-
+    
   // MainMenu page scrolling starts here
-  // $('a[href*="#"]:not([href="#"])').click(function() {
-  //   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-  //     var target = $(this.hash);
-  //     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-  //     if (target.length) {
-  //       $('html, body').animate({
-  //         scrollTop: target.offset().top
-  //       }, 1000);
-  //       return false;
-  //     }
-  //   }
-  // });
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
   // MainMenu page scrolling ends here
 
   // Cookies alert control starts here
   var cookieList =  document.cookie.split(";");
   for(var i = 0; i <cookieList.length; i++) {
     var cookieElement = cookieList[i];
-    if (cookieElement == "cookies-note=xx") {//trzeba zmienić wartość ciasteczka na confirmed
+    if (cookieElement == "cookies-note=xxx") {//trzeba zmienić wartość ciasteczka na confirmed
         $("#cookies-alert").hide();
         return;
     }
