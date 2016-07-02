@@ -6,7 +6,7 @@ body {
 }
 
 .main-nav {
-	box-shadow: rgba(13,11,11,0.8) 0 0 15px 0;
+	box-shadow: rgba(13,11,11,0.8) 0 0 15px;
 }
 
 .main-nav li {
@@ -134,6 +134,18 @@ footer {
 .social-icons-link {
 	padding: 0 5px;
 	margin: 0 0 20px 0;
+}
+
+.back-icon {
+	text-align: center;
+	padding: 20px 0;
+	font-size: 15px;
+	margin-top: 2px;
+}
+
+.back-icon img {
+	position: relative;
+	top: -2px;
 }
 
 .container a:hover{
