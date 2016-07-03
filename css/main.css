@@ -11,6 +11,7 @@ body {
 }
 
 .main-nav li {
+	text-shadow: rgba(13,11,11,0.3) 0 0 2px;
 	font-size: 16px;
 }
 

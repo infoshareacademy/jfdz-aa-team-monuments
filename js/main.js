@@ -39,7 +39,7 @@ $(document).ready(function() {
   var cookieList =  document.cookie.split(";");
   for(var i = 0; i <cookieList.length; i++) {
     var cookieElement = cookieList[i];
-    if (cookieElement == "cookies-note=xxx") {//trzeba zmienić wartość ciasteczka na confirmed
+    if (cookieElement == "cookies-note=confirmed") {//trzeba zmienić wartość ciasteczka na confirmed
         $("#cookies-alert").hide();
         return;
     }

@@ -120,18 +120,15 @@
         	<div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h3>Formularz Podstawowy</h3>
-                        <form action="index.html" class="contact-form" method="get"> <!-- podstawowy formularz-->
-                            <div class="form-group">
-                                <label for="first-name-basic">Imię: </label>
-                                <input id="first-name-basic" class="form-control" type="text" placeholder="Jan" required>
-                                <br>
-                                <label for="e-mail-basic">E-mail: </label>
-                                <input id="e-mail-basic" class="form-control" type="email" placeholder="email@domain.com" required>
-                                <br>
-                                <input type="submit" class="btn btn-default" value="wyślij">
-                            </div>
-                        </form>
+                        <h3>
+                            <span class="fa-stack fa-lg"> <!-- ikona skombinowana z dwóch elementów -->
+                                <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i>
+                                <i class="fa fa-pied-piper-alt  fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                            </span>
+                            Dane kontaktowe
+                        </h3>
+                        <br>
+                        <p>Sample Text Placeholder.</p>
                     </div>
 
                     <div class="col-md-6">
@@ -192,9 +189,9 @@
         </footer>
         <!--Footer ends here -->
 
-        <div id="cookies-confirm" class="alert alert-warning alert-dismissible cookies text-center" role="alert">
+        <div id="cookies-alert" class="alert alert-warning alert-dismissible cookies text-center" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <button type="button" id="cookies-alert" class="btn-primary" data-dismiss="alert" aria-label="Close">BAJE CZAZE</button>
+            <button type="button" id="cookies-confirm" class="btn-primary" data-dismiss="alert" aria-label="Close">BAJE CZAZE</button>
             <strong>Ciastka!</strong> omomomomomomomom...
         </div>
     
