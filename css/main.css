@@ -63,8 +63,9 @@ body {
 /* Super Hyper Big Fat Teaser Image Style ends here */
 
 main {
-	background-color:#FCFFF5;
-	padding: 20px 0;
+	background-color:#FAFCFB;
+	padding: 40px 0 50px;
+	border-bottom: 1px solid #eee;
 	}
 	
 section {
@@ -73,14 +74,19 @@ section {
 	}
 
 footer {
-	background-color:#2C858D;
+	background-color:#2F343B;
 	padding: 15px 0;
+	color: #7E827A;
 
+}
+
+footer hr {
+	border-top: 1px solid #4D5259;
 }
 
 .about {
 	text-align: center;
-	background-color: #E9F0F2;
+	background-color: #fff;
 	padding: 60px 0;
 }
 
@@ -173,18 +179,17 @@ footer {
 }
 
 .footer-link {
-	color: #1e1e1e;
+	color: #E3CDA4;
 }
 
 .footer-link:hover {
-	color: #EB7F00;
+	color: #EDD7AE;
 }
 
 .container a:hover{
 	text-decoration: none;
 }
 .copyright {
-	color:#1e1e1e;
 	text-align: center;
 }
 
