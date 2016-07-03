@@ -63,7 +63,7 @@ body {
 /* Super Hyper Big Fat Teaser Image Style ends here */
 
 main {
-	background-color:#FFF;
+	background-color:#FCFFF5;
 	padding: 20px 0;
 	}
 	
@@ -73,14 +73,14 @@ section {
 	}
 
 footer {
-	background-color:#666;
+	background-color:#2C858D;
 	padding: 15px 0;
 
 }
 
 .about {
 	text-align: center;
-	background-color: #E7E7E7;
+	background-color: #E9F0F2;
 	padding: 60px 0;
 }
 
@@ -161,6 +161,9 @@ footer {
 	padding: 20px 0;
 	font-size: 15px;
 	margin-top: 2px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
 }
 
 .back-icon img {
@@ -173,7 +176,7 @@ footer {
 }
 
 .footer-link:hover {
-	color: #999999;
+	color: #EB7F00;
 }
 
 .container a:hover{
