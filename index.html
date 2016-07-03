@@ -11,6 +11,7 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="css/main.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     </head>
     <body>
@@ -23,7 +24,11 @@
                     <div class="navbar-toggle btn icon-bar" data-toggle="collapse" data-target="#mainNavbar">
                         <span class="glyphicon glyphicon-menu-hamburger"></span>
                     </div>
-                    <a class="navbar-brand" href="#top"><i class="fa fa-map-o" aria-hidden="true"></i> Nazwa</a>
+                    <a class="navbar-brand" href="#top">
+                        <span class="navbar-logo" aria-hidden="true">
+                        </span>
+                        <span class="navbar-name">Zabytki Gdańska</span>
+                    </a>
                 </div>
                 <div class="collapse navbar-collapse" id="mainNavbar" >
                     <ul class="nav navbar-nav navbar-right">
@@ -173,8 +178,13 @@
                         <img src="images/social_icons/google.png" />
                     </a>
                 </p>
-                <p class="back-icon">wróć do góry, wróć do góry!:)
-                    <a href="#top">
+                <div class="copyright">
+                    &copy; by AA_Team
+                </div>
+
+                <p class="back-icon">
+                    <a href="#top" class="footer-link">
+                        wróć do góry, wróć do góry!
                         <img src="images/social_icons/up.png" />
                     </a>
                 </p>
@@ -182,8 +192,9 @@
         </footer>
         <!--Footer ends here -->
 
-        <div class="alert alert-warning alert-dismissible cookies text-center" role="alert">
+        <div id="cookies-confirm" class="alert alert-warning alert-dismissible cookies text-center" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <button type="button" id="cookies-alert" class="btn-primary" data-dismiss="alert" aria-label="Close">BAJE CZAZE</button>
             <strong>Ciastka!</strong> omomomomomomomom...
         </div>
     
