@@ -3,14 +3,34 @@
 
 body {
 	padding-top: 50px;
+	font-family: 'Lato', sans-serif;
 }
 
 .main-nav {
-	box-shadow: rgba(13,11,11,0.8) 0 0 15px 0;
+	box-shadow: rgba(13,11,11,0.8) 0 0 15px;
 }
 
 .main-nav li {
 	font-size: 16px;
+}
+
+.navbar-logo {
+	display: inline-block;
+	width: 87px;
+	height: 46px;
+	background: url("../images/gdansk.svg") no-repeat;
+	background-size: 87px 46px;
+	position: relative;
+	top: -13px;
+}
+
+.navbar-name {
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 8px;
+	color: #000;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
 }
 
 /* Super Hyper Big Fat Teaser Image Style */
@@ -43,8 +63,9 @@ body {
 /* Super Hyper Big Fat Teaser Image Style ends here */
 
 main {
-	background-color:#FFF;
-	padding: 20px 0;
+	background-color:#FAFCFB;
+	padding: 40px 0 50px;
+	border-bottom: 1px solid #eee;
 	}
 	
 section {
@@ -53,14 +74,19 @@ section {
 	}
 
 footer {
-	background-color:#666;
+	background-color:#2F343B;
 	padding: 15px 0;
+	color: #7E827A;
 
+}
+
+footer hr {
+	border-top: 1px solid #4D5259;
 }
 
 .about {
 	text-align: center;
-	background-color: #E7E7E7;
+	background-color: #fff;
 	padding: 60px 0;
 }
 
@@ -112,7 +138,7 @@ footer {
 
 /* Form styles */
 .contact-form {
-	background-color: #E7E7E7;
+	background-color: #e7e7e7;
 	border-radius: 5px;
 	padding: 15px;
 	margin-bottom: 15px;
@@ -121,6 +147,7 @@ footer {
 .form-field {
 	margin-top:10px;
 }
+
 /* Form styles ends here*/
 
 .social-icons {
@@ -136,15 +163,42 @@ footer {
 	margin: 0 0 20px 0;
 }
 
+.back-icon {
+	text-align: right;
+	padding: 20px 0;
+	font-size: 15px;
+	margin-top: 2px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+.back-icon img {
+	position: relative;
+	top: -2px;
+}
+
+.footer-link {
+	color: #E3CDA4;
+}
+
+.footer-link:hover {
+	color: #EDD7AE;
+}
+
 .container a:hover{
 	text-decoration: none;
 }
+.copyright {
+	text-align: center;
+}
+
 .cookies {
 	margin-left: 5%;
-	background-color: ghostwhite;
+	background-color: #ce9e83;
 	position: fixed;
 	bottom: 15px;
 	width: 90%;
+	z-index: 10;
 }
-
 
