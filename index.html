@@ -15,6 +15,7 @@
     </head>
     <body>
     <!--Header starts here -->
+    <span id="top"></span>
     <header>
         <nav class="main-nav navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -22,13 +23,17 @@
                     <div class="navbar-toggle btn icon-bar" data-toggle="collapse" data-target="#mainNavbar">
                         <span class="glyphicon glyphicon-menu-hamburger"></span>
                     </div>
-                    <a class="navbar-brand" href="#"><i class="fa fa-map-o" aria-hidden="true"></i> Nazwa</a>
+                    <a class="navbar-brand" href="#top">
+                        <span class="navbar-logo" aria-hidden="true">
+                        </span>
+                        <span class="navbar-name">Zabytki Gdańska</span>
+                    </a>
                 </div>
                 <div class="collapse navbar-collapse" id="mainNavbar" >
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#">Item I</a></li>
-                        <li><a href="#">Item II</a></li>
-                        <li><a href="#">Item III</a></li>
+                        <li><a href="#main">Main</a></li>
+                        <li><a href="#team">O nas</a></li>
+                        <li><a href="#footer">Kontakt</a></li>
                     </ul>
                 </div>
             </div>
@@ -49,7 +54,7 @@
     <!--Super Hyper Big Fat Teaser Image ends here-->
 
         <!--Main content starts here -->
-        <main>
+        <main id="main">
         	<div class="container">
                 <h2>Main Content Container</h2>
                 <p>Spodziewając się zgadzanie się różnić od świata jest to, co też każdy wiedział
@@ -62,7 +67,7 @@
         </main>
         <!--Main content ends here -->
 
-        <section class="about">
+        <section id="team" class="about">
             <h2>Nasz Zespół</h2>
             <p class="about-team">AA Team. 3 osoby, 3 żywioły.Z połączonych sił powstał nie Kapitan Planeta,<br /> lecz zespół Infoshare Academy który zanim opanuje świat, pragnie poznać nieco front-endowej magii;) </p>
 
@@ -110,29 +115,26 @@
         </section>
         
         <!--Footer starts here -->
-        <footer>
+        <footer id="footer">
         	<div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h3>Formularz Podstawowy</h3>
-                        <form action="index.html" class="contact-form" method="get"> <!-- podstawowy formularz-->
-                            <div class="form-group">
-                                <label for="first-name-basic">Imię: </label>
-                                <input id="first-name-basic" class="form-control" type="text" placeholder="Jan" required>
-                                <br>
-                                <label for="e-mail-basic">E-mail: </label>
-                                <input id="e-mail-basic" class="form-control" type="email" placeholder="email@domain.com" required>
-                                <br>
-                                <input type="submit" class="btn btn-default" value="wyślij">
-                            </div>
-                        </form>
+                        <h3>
+                            <span class="fa-stack fa-lg"> <!-- ikona skombinowana z dwóch elementów -->
+                                <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i>
+                                <i class="fa fa-wpforms fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                            </span>
+                            Dane kontaktowe
+                        </h3>
+                        <br>
+                        <p>Sample Text Placeholder.</p>
                     </div>
 
                     <div class="col-md-6">
                         <h3>
                             <span class="fa-stack fa-lg"> <!-- ikona skombinowana z dwóch elementów -->
                                 <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i>
-                                <i class="fa fa-rebel fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                                <i class="fa fa-envelope-o fa-stack-1x fa-inverse" aria-hidden="true"></i>
                             </span>
                             Zapisz się do spamlettera
                         </h3>
@@ -141,15 +143,15 @@
                             <div class="form-group form-inline" >
                                 <div class="input-group form-field">
                                     <span class="input-group-addon" id="user-name">Imię</span>
-                                    <input type="text" class="form-control" placeholder="Steve" aria-describedby="user-name" required>
+                                    <input type="text" class="form-control locked" placeholder="Steve" aria-describedby="user-name" required disabled>
                                 </div>
-                                <div class="input-group form-field">
+                                <div class="input-group form-field" >
                                     <span class="input-group-addon" id="user-email">Email</span>
-                                    <input type="email" class="form-control" placeholder="email@domain.com" aria-describedby="user-email" required>
+                                    <input type="email" class="form-control locked" placeholder="email@domain.com" aria-describedby="user-email" required disabled>
                                 </div>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox" required><em>Uwielbiam dostawać śmieci na maila</em></label>
+                                <label><input type="checkbox" required class="antibot" /><em>Uwielbiam dostawać śmieci na maila</em></label>
                             </div>
                             <button type="submit" class="btn btn-default"><i class="fa fa-envelope-o" aria-hidden="true"></i> wyślij</button>
                         </form>
@@ -172,12 +174,23 @@
                         <img src="images/social_icons/google.png" />
                     </a>
                 </p>
+                <div class="copyright">
+                    &copy; by AA_Team
+                </div>
+
+                <p class="back-icon">
+                    <a href="#top" class="footer-link">
+                        wróć do góry, wróć do góry!
+                        <img src="images/social_icons/up.png" />
+                    </a>
+                </p>
             </div>
         </footer>
         <!--Footer ends here -->
 
-        <div class="alert alert-warning alert-dismissible cookies text-center" role="alert">
+        <div id="cookies-alert" class="alert alert-warning alert-dismissible cookies text-center" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <button type="button" id="cookies-confirm" class="btn-primary" data-dismiss="alert" aria-label="Close">BAJE CZAZE</button>
             <strong>Ciastka!</strong> omomomomomomomom...
         </div>
     
