@@ -37,13 +37,14 @@ body {
 .teaser {
 	width: 100%;
 	padding: 0;
+	background-color: #ffffff;
 }
 
 .teaser-image {
+    background-image: url(../images/main_image/1.jpg);
 	background-position: center;
 	background-size: cover;
-	opacity: 0;
-	transition: opacity 1s linear;
+	transition: 2s ease;
 }
 
 .teaser-text {
