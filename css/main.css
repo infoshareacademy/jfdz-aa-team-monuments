@@ -11,7 +11,7 @@ body {
 }
 
 .main-nav li {
-	font-size: 16px;
+	font-size: 18px;
 	margin-top: 5px;
 }
 
@@ -20,17 +20,13 @@ body {
 	display: inline-block;
 }
 .navbar-logo {
-	height: 70px;
+	height: 80px;
 }
 .navbar-name {
 	color: #414141;
 	font-family: 'Lato', sans-serif;
-	font-size: 20px;
-	font-weight: 600;
-}
-
-.navbar-name a {
-	text-decoration: none;
+	font-size: 28px;
+	font-weight: 400;
 }
 
 /* Super Hyper Big Fat Teaser Image Style */
@@ -68,6 +64,9 @@ main {
 	padding: 60px 0 60px;
 	border-bottom: 1px solid #eee;
 	}
+main p {
+	padding-bottom: 10px ;
+}
 	
 section {
 	background-color:#999;

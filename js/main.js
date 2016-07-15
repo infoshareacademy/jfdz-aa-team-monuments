@@ -20,8 +20,8 @@ $(document).ready(function () {
     var bgiNext = bgi.shift();
         bgi.push(bgiNext);
         $(".teaser-image").css("opacity", "0").css('background-image', 'url("images/main_image/' + bgiNext + '")').animate({opacity: "1"});
-     }, 5000);
-    // Main Teaser Image Random Switch/Animation ends here
+     }, 7000);
+    // Main Teaser Image Switch/Animation ends here
 
     // MainMenu page scrolling starts here
     $('a[href*="#"]:not([href="#"])').click(function () {
