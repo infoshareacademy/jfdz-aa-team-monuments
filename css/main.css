@@ -61,6 +61,23 @@ body {
 	font-size: 18px;
 	font-weight: 300;
 }
+
+.btn-cta {
+    color: #fff;
+    background: transparent;
+    border-color: #fff;
+    padding: 17px 32px;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    top: 50px;
+}
+
+.btn-cta:hover, .btn-cta.focus, .btn-cta:focus {
+    color: #eee;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #eee;
+}
+
 /* Super Hyper Big Fat Teaser Image Style ends here */
 
 main {
@@ -164,27 +181,36 @@ footer hr {
 	margin: 0 0 20px 0;
 }
 
-.back-icon {
+.back {
 	text-align: right;
 	padding: 20px 0;
 	font-size: 15px;
 	margin-top: 2px;
 	position: fixed;
 	bottom: 0;
-	right: 0;
+	right: 15px;
 }
 
-.back-icon img {
-	position: relative;
-	top: -2px;
+.back-link {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 11px 7px;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
 }
 
-.footer-link {
-	color: #E3CDA4;
+.back-link:hover, .back-link:focus {
+    background: rgba(233, 233, 233, 0.1);
 }
 
-.footer-link:hover {
-	color: #EDD7AE;
+.back-link-icon {
+    background: url("../images/back-arrow.svg") no-repeat;
+    background-size: 24px 24px;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
 }
 
 .container a:hover{
