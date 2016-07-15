@@ -7,30 +7,30 @@ body {
 }
 
 .main-nav {
-	box-shadow: rgba(13,11,11,0.8) 0 0 15px;
+	box-shadow: rgba(13,11,11,0.3) 0 0 12px;
 }
 
 .main-nav li {
 	font-size: 16px;
+	margin-top: 5px;
 }
 
+.navbar-headline {
+	height: 60px;
+	display: inline-block;
+}
 .navbar-logo {
-	display: inline-block;
-	width: 87px;
-	height: 46px;
-	background: url("../images/gdansk.svg") no-repeat;
-	background-size: 87px 46px;
-	position: relative;
-	top: -13px;
+	height: 70px;
+}
+.navbar-name {
+	color: #414141;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	font-weight: 600;
 }
 
-.navbar-name {
-	display: inline-block;
-	vertical-align: top;
-	padding-left: 8px;
-	color: #000;
-	font-family: 'Lato', sans-serif;
-	font-weight: 700;
+.navbar-name a {
+	text-decoration: none;
 }
 
 /* Super Hyper Big Fat Teaser Image Style */
@@ -65,7 +65,7 @@ body {
 
 main {
 	background-color:#FAFCFB;
-	padding: 40px 0 50px;
+	padding: 60px 0 60px;
 	border-bottom: 1px solid #eee;
 	}
 	
