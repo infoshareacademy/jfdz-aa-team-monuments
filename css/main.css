@@ -231,11 +231,19 @@ footer hr {
 }
 
 .cookies {
+    background-color: rgba(250, 252, 251, 0.9);
+    color: #4D5259;
 	margin-left: 5%;
-	background-color: #ce9e83;
 	position: fixed;
 	bottom: 15px;
 	width: 90%;
 	z-index: 10;
 }
-
+.zatwierdz {
+    color: rgb(250, 252, 251);
+    background-color: #4D5259;
+    border-color: #999999;
+}
+#cookies-alert {
+    border-color: #c5c2c2;
+}
