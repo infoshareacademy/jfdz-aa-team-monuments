@@ -7,43 +7,40 @@ body {
 }
 
 .main-nav {
-	box-shadow: rgba(13,11,11,0.8) 0 0 15px;
+	box-shadow: rgba(13,11,11,0.3) 0 0 12px;
 }
 
 .main-nav li {
-	font-size: 16px;
+	font-size: 18px;
+	margin-top: 5px;
 }
 
+.navbar-headline {
+	height: 60px;
+	display: inline-block;
+}
 .navbar-logo {
-	display: inline-block;
-	width: 87px;
-	height: 46px;
-	background: url("../images/gdansk.svg") no-repeat;
-	background-size: 87px 46px;
-	position: relative;
-	top: -13px;
+	height: 80px;
 }
-
 .navbar-name {
-	display: inline-block;
-	vertical-align: top;
-	padding-left: 8px;
-	color: #000;
+	color: #414141;
 	font-family: 'Lato', sans-serif;
-	font-weight: 700;
+	font-size: 28px;
+	font-weight: 400;
 }
 
 /* Super Hyper Big Fat Teaser Image Style */
 .teaser {
 	width: 100%;
 	padding: 0;
+	background-color: #ffffff;
 }
 
 .teaser-image {
+    background-image: url(../images/main_image/1.jpg);
 	background-position: center;
 	background-size: cover;
-	opacity: 0;
-	transition: opacity 1s linear;
+	transition: 2s ease;
 }
 
 .teaser-text {
@@ -60,12 +57,33 @@ body {
 	font-size: 18px;
 	font-weight: 300;
 }
+
+.btn-cta {
+    color: #fff;
+    background: transparent;
+    border-color: #fff;
+    padding: 17px 32px;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    top: 50px;
+}
+
+.btn-cta:hover, .btn-cta.focus, .btn-cta:focus {
+    color: #eee;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #eee;
+}
+
 /* Super Hyper Big Fat Teaser Image Style ends here */
 
 main {
-	background-color:#FCFFF5;
-	padding: 20px 0;
+	background-color:#FAFCFB;
+	padding: 60px 0 60px;
+	border-bottom: 1px solid #eee;
 	}
+main p {
+	padding-bottom: 10px ;
+}
 	
 section {
 	background-color:#999;
@@ -73,14 +91,19 @@ section {
 	}
 
 footer {
-	background-color:#2C858D;
+	background-color:#2F343B;
 	padding: 15px 0;
+	color: #7E827A;
 
+}
+
+footer hr {
+	border-top: 1px solid #4D5259;
 }
 
 .about {
 	text-align: center;
-	background-color: #E9F0F2;
+	background-color: #fff;
 	padding: 60px 0;
 }
 
@@ -141,6 +164,7 @@ footer {
 .form-field {
 	margin-top:10px;
 }
+
 /* Form styles ends here*/
 
 .social-icons {
@@ -156,34 +180,42 @@ footer {
 	margin: 0 0 20px 0;
 }
 
-.back-icon {
+.back {
 	text-align: right;
 	padding: 20px 0;
 	font-size: 15px;
 	margin-top: 2px;
 	position: fixed;
 	bottom: 0;
-	right: 0;
+	right: 15px;
 }
 
-/*.back-icon img {
-	position: relative;
-	top: -2px;
-}*/
-
-.footer-link {
-	color: #1e1e1e;
+.back-link {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 11px 7px;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
 }
 
-.footer-link:hover {
-	color: #EB7F00;
+.back-link:hover, .back-link:focus {
+    background: rgba(233, 233, 233, 0.1);
+}
+
+.back-link-icon {
+    background: url("../images/back-arrow.svg") no-repeat;
+    background-size: 24px 24px;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
 }
 
 .container a:hover{
 	text-decoration: none;
 }
 .copyright {
-	color:#1e1e1e;
 	text-align: center;
 }
 
