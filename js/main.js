@@ -1,8 +1,6 @@
 // “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”
 
-$(document).ready(function () {
-    
-    // Navigation Toggle starts here
+function initMenuToggle() {
     $(".navbar-toggle").click(function () {
         $("#mainNavbar").toggle();
     });
@@ -11,19 +9,9 @@ $(document).ready(function () {
         $(".nav").children().removeClass("active");
         $(this).toggleClass("active")
     });
-    // Navigation Toggle ends here
+}
 
-    // Main Teaser Image Switch/Animation starts here
-    var bgi = ["2.jpg", "3.jpg", "4.jpg","1.jpg"]; // images list
-
-    setInterval(function(){
-    var bgiNext = bgi.shift();
-        bgi.push(bgiNext);
-        $(".teaser-image").css("opacity", "0").css('background-image', 'url("images/main_image/' + bgiNext + '")').animate({opacity: "1"});
-     }, 7000);
-    // Main Teaser Image Switch/Animation ends here
-
-    // MainMenu page scrolling starts here
+function initMenuScroll(){
     $('body').scrollspy({target: ".navbar", offset: 50});
     $(".navbar a, .back a").on('click', function(event) {
         if (this.hash !== "") {
@@ -38,9 +26,20 @@ $(document).ready(function () {
             });
         }
     });
-    // MainMenu page scrolling ends here
+}
 
-    // Cookies alert control starts here
+function initTeaserSwitch() {
+
+    var bgi = ["2.jpg", "3.jpg", "4.jpg","1.jpg"]; // images list
+
+    setInterval(function(){
+        var bgiNext = bgi.shift();
+        bgi.push(bgiNext);
+        $(".teaser-image").css("opacity", "0").css('background-image', 'url("images/main_image/' + bgiNext + '")').animate({opacity: "1"});
+    }, 7000);
+}
+
+function initCookiesAlert() {
     var cookieList = document.cookie.split(";");
     for (var i = 0; i < cookieList.length; i++) {
         var cookieElement = cookieList[i];
@@ -53,11 +52,19 @@ $(document).ready(function () {
         document.cookie = "cookies-note=confirmed";
         $("#cookies-alert").hide();
     });
-    // Cookies alert control ends here
+}
 
-    //Contact form fields disable //
+function initFormValidation() {
     $(".antibot").click(function () {
         $(".locked").prop("disabled", !$(this).is(":checked"));
-    })
-    
+    });
+}
+
+$(document).ready(function () {
+    initMenuToggle(); 
+    initMenuScroll();
+    initTeaserSwitch();
+    initCookiesAlert();
+    initFormValidation()
+
 }); // Document Last Line  
