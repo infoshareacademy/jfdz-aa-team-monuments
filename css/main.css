@@ -25,6 +25,10 @@ body {
 	font-size: 15px;
 }
 
+.main-content-intro {
+	text-align: center;
+}
+
 .navbar-headline {
 	height: 60px;
 	display: inline-block;
