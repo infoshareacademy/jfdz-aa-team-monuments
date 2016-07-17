@@ -31,6 +31,7 @@ body {
 }
 .navbar-logo {
 	height: 80px;
+	z-index: 10;
 }
 .navbar-name {
 	color: #414141;
@@ -114,11 +115,15 @@ footer hr {
 .about {
 	text-align: center;
 	background-color: #fff;
-	padding: 60px 0;
+	padding-top: 60px;
 }
 
 .about h2 {
 	padding-bottom: 30px;
+}
+
+footer h3{
+	padding: 10px 0;
 }
 
 .about-team {
@@ -128,10 +133,7 @@ footer hr {
 }
 
 .about-box {
-	display: inline-block;
-	margin: 0 40px;
-	width: 300px;
-	vertical-align: top;
+	margin-bottom: 25px;
 }
 
 .about-box a:hover {
@@ -150,11 +152,11 @@ footer hr {
 	font-size: 15px;
 	line-height: 28px;
 	text-align: justify;
+	padding: 0 15px;
 }
 
 .about-box-image {
-	height: 250px;
-	width: 250px;
+	width: 60%;
 	border-radius: 50%;
 }
 

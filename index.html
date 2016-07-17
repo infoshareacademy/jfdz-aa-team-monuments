@@ -14,7 +14,7 @@
         <link href='https://fonts.googleapis.com/css?family=Lato:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     </head>
-    <body>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
     <!--Header starts here -->
     <span id="top"></span>
     <header>
@@ -130,52 +130,58 @@
         </main>
         <!--Main content ends here -->
 
-        <section id="team" class="about">
+        <div id="team" class="container about">
+           <div class="row">
+                <div class="col-md-12">
             <h2>Nasz Zespół</h2>
             <p class="about-team">AA Team. 3 osoby, 3 żywioły. Z połączonych sił powstał nie Kapitan Planeta,<br /> lecz zespół Infoshare Academy który zanim opanuje świat, pragnie poznać nieco front-endowej magii;) </p>
-
-            <div class="about-box">
-                <img src="images/about/lukasz.jpg" class="about-box-image" alt="Łukasz"/>
-                <h3>Łukasz</h3>
-                <p>Chłopak z Mazur, instruktor tańca, myśliwy i zakręcony gość - postanowił rozpocząć przygodę z front-end'em w Gdańsku. Głowa pełna pomysłów, co owocuje różnorodnymi projektami. Gotowy na współprace z najbardziej wymagającymi klientami;)</p>
-                <p>
-                    <a href="https://pl.linkedin.com/in/łukasz-kowalewski-298187100" target="_blank">
-                        <img src="images/social_icons/linkedin.png" class="about-box-social" alt="Linkedin"/>
-                    </a>
-                    <a href="https://github.com/endfreakzz" target="_blank">
-                    <img src="images/social_icons/github.png" class="about-box-social" alt="Github"/>
-                    </a>
-                </p>
             </div>
+                </div>
 
-            <div class="about-box">
-                <img src="images/about/magda.jpg" class="about-box-image" alt="Magda"/>
-                <h3>Magda</h3>
-                <p>Anglistka zakochana w świecie IT. Customer Relations Leader w firmie UXPin. Wierzy w ulepszanie Customer Experience jako integralnej części UX jak i całego procesu projektowania usług. Uwielbia pracę z developerami - krzyczy kiedy trzeba;) Perfekcjonistka, team player, empatyczne stworzenie, miłośniczka tworzenia contentu dla użytkownika. W wolnym czasie - oddana fanka literatury amerykańskiej.</p>
-                <p>
-                    <a href="https://pl.linkedin.com/in/magdalena-olszewska-a463ab96" target="_blank">
-                        <img src="images/social_icons/linkedin.png" class="about-box-social" alt="Linkedin"/>
-                    </a>
-                    <a href="https://github.com/molszewska" target="_blank">
+            <div class="row">
+                <div class="about-box col-md-4">
+                    <img src="images/about/lukasz.jpg" class="about-box-image" alt="Łukasz"/>
+                    <h3>Łukasz</h3>
+                    <p>Chłopak z Mazur, instruktor tańca, myśliwy i zakręcony gość - postanowił rozpocząć przygodę z front-end'em w Gdańsku. Głowa pełna pomysłów, co owocuje różnorodnymi projektami. Gotowy na współprace z najbardziej wymagającymi klientami;)</p>
+                    <p>
+                        <a href="https://pl.linkedin.com/in/łukasz-kowalewski-298187100" target="_blank">
+                            <img src="images/social_icons/linkedin.png" class="about-box-social" alt="Linkedin"/>
+                        </a>
+                        <a href="https://github.com/endfreakzz" target="_blank">
                         <img src="images/social_icons/github.png" class="about-box-social" alt="Github"/>
-                    </a>
-                </p>
-            </div>
+                        </a>
+                    </p>
+                </div>
 
-            <div class="about-box">
-                <img src="images/about/michal.jpg" class="about-box-image" alt="Michał"/>
-                <h3>Michał</h3>
-                <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
-                <p>
-                    <a href="" target="_blank">
-                        <img src="images/social_icons/linkedin.png" class="about-box-social" alt="Linkedin"/>
-                    </a>
-                    <a href="https://github.com/Zaxaar" target="_blank">
-                        <img src="images/social_icons/github.png" class="about-box-social" alt="Github"/>
-                    </a>
-                </p>
-            </div>
-        </section>
+                <div class="about-box col-md-4 ">
+                    <img src="images/about/magda.jpg" class="about-box-image " alt="Magda"/>
+                    <h3>Magda</h3>
+                    <p>Anglistka zakochana w świecie IT. Customer Relations Leader w firmie UXPin. Wierzy w ulepszanie Customer Experience jako integralnej części UX jak i całego procesu projektowania usług. Uwielbia pracę z developerami - krzyczy kiedy trzeba;) Perfekcjonistka, team player, empatyczne stworzenie, miłośniczka tworzenia contentu dla użytkownika. W wolnym czasie - oddana fanka literatury amerykańskiej.</p>
+                    <p>
+                        <a href="https://pl.linkedin.com/in/magdalena-olszewska-a463ab96" target="_blank">
+                            <img src="images/social_icons/linkedin.png" class="about-box-social" alt="Linkedin"/>
+                        </a>
+                        <a href="https://github.com/molszewska" target="_blank">
+                            <img src="images/social_icons/github.png" class="about-box-social" alt="Github"/>
+                        </a>
+                    </p>
+                </div>
+
+                <div class="about-box col-md-4">
+                    <img src="images/about/michal.jpg" class="about-box-image" alt="Michał"/>
+                    <h3>Michał</h3>
+                    <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+                    <p>
+                        <a href="" target="_blank">
+                            <img src="images/social_icons/linkedin.png" class="about-box-social" alt="Linkedin"/>
+                        </a>
+                        <a href="https://github.com/Zaxaar" target="_blank">
+                            <img src="images/social_icons/github.png" class="about-box-social" alt="Github"/>
+                        </a>
+                    </p>
+                </div>
+            </div> <!--row-->
+        </div>
         
         <!--Footer starts here -->
         <footer id="footer">
@@ -183,11 +189,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h3>
-                            <span class="fa-stack fa-lg"> <!-- ikona skombinowana z dwóch elementów -->
-                                <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i>
-                                <i class="fa fa-wpforms fa-stack-1x fa-inverse" aria-hidden="true"></i>
-                            </span>
-                            Fotografie
+                            <span class="fa fa-wpforms"> </span> Fotografie
                         </h3>
                         <ul>
                             <li>
@@ -203,11 +205,7 @@
 
                     <div class="col-md-6">
                         <h3>
-                            <span class="fa-stack fa-lg"> <!-- ikona skombinowana z dwóch elementów -->
-                                <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i>
-                                <i class="fa fa-envelope-o fa-stack-1x fa-inverse" aria-hidden="true"></i>
-                            </span>
-                            Spamletter
+                            <span class="fa fa-envelope-o"></span> Spamletter
                         </h3>
                         <form action="" class="contact-form" method="get"> <!-- formularz z bajearmi-->
                             <p>Daj znać jeśli chcesz, żebyśmy wysłali Ci trochę spamu.</p>
