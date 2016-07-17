@@ -154,6 +154,7 @@ footer hr {
 	font-size: 15px;
 	line-height: 28px;
 	text-align: justify;
+	padding-bottom: 10px;
 }
 
 .about-box-image {
@@ -162,10 +163,20 @@ footer hr {
 	border-radius: 50%;
 }
 
-.about-box-social {
-	width: 32px;
-	height: 32px;
-	display: inline-block;
+.linkedin-icon {
+	background: url("../images/social_icons/linkedin.svg");
+	background-size: 20px;
+	height: 20px;
+	width: 20px;
+	display:inline-block;
+}
+
+.github-icon {
+	background: url("../images/social_icons/github.svg");
+	background-size: 20px;
+	height: 20px;
+	width: 20px;
+	display:inline-block;
 }
 
 /* Form styles */
@@ -184,10 +195,36 @@ footer hr {
 
 .social-icons {
 	text-align: center;
+	height: 35px;
 }
 
 .social-icons a:hover {
 	text-decoration: none;
+}
+
+.facebook-icon {
+	background: url("../images/social_icons/facebook.svg");
+	background-size: 30px;
+	height: 30px;
+	width: 30px;
+	display:inline-block;
+}
+
+.twitter-icon {
+	background: url("../images/social_icons/twitter.svg");
+	background-size: 30px;
+	height: 30px;
+	width: 30px;
+	display:inline-block;
+}
+
+.google-icon {
+	background: url("../images/social_icons/google.svg");
+	background-size: 35px;
+	height: 35px;
+	width: 35px;
+	display:inline-block;
+	vertical-align: center;
 }
 
 .social-icons-link {
