@@ -29,7 +29,6 @@ function initMenuScroll(){
 }
 
 function initTeaserSwitch() {
-
     var bgi = ["2.jpg", "3.jpg", "4.jpg","1.jpg"]; // images list
 
     setInterval(function(){

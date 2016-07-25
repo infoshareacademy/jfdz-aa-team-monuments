@@ -58,13 +58,12 @@ body {
 }
 
 .teaser-text {
-	padding-top: 15%;
-	padding-bottom: 25%;
+	padding: 15% 10px 25%;
 	color: #FFF;
 }
 
 .teaser-text h1 {
-	font-size: 48px;
+	font-size: 45px;
 }
 
 .teaser-text p {
@@ -155,7 +154,7 @@ footer h3{
 	font-size: 15px;
 	line-height: 28px;
 	text-align: justify;
-	padding: 10 15px;
+	padding: 10px 15px;
 }
 
 .about-box-image {
