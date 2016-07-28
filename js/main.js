@@ -34,8 +34,8 @@ function initTeaserSwitch() {
     setInterval(function(){
         var bgiNext = bgi.shift();
         bgi.push(bgiNext);
-        $(".teaser-image").css("opacity", "0").css('background-image', 'url("images/main_image/' + bgiNext + '")').animate({opacity: "1"});
-    }, 7000);
+        $(".teaser-image").css({"opacity":"0",'background-image':'url("images/main_image/' + bgiNext + '")'}).animate({opacity: "1"});
+    }, 5000);
 }
 
 function initCookiesAlert() {
