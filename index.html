@@ -11,7 +11,7 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="css/main.css">
-        <link href='https://fonts.googleapis.com/css?family=Lato:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     </head>
     <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -25,15 +25,14 @@
                         <span class="glyphicon glyphicon-menu-hamburger"></span>
                     </div>
                     <a class="navbar-headline" href="#top">
-                        <img class="navbar-logo" src="images/logo/logo_4.png" alt="logo">
-                        <!--<span class="navbar-name">Zabytki Gdańska</span>-->
+                        <img class="navbar-logo" src="images/logo/new_logo.png" alt="logo">
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="mainNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#main">Zabytki</a></li>
-                        <li><a href="#team">O nas</a></li>
-                        <li><a href="#footer">Kontakt</a></li>
+                        <li class="main-nav-item"><a href="#main">Zabytki</a></li>
+                        <li class="main-nav-item"><a href="#team">O nas</a></li>
+                        <li class="main-nav-item"><a href="#footer">Kontakt</a></li>
                     </ul>
                 </div>
             </div>
@@ -53,201 +52,250 @@
     </div>
     <!--Super Hyper Big Fat Teaser Image ends here-->
 
-        <!--Main content starts here -->
-        <main id="main">
-        	<div class="container">
-                <h2>Gdańskie zabytki - Daj się skusić!</h2>
-                <p class="main-content-intro">
-                    Gdańskie Stare Miasto to wymarzone miejsce na spokojny spacer szlakiem zabytków. Możemy zacząć od razu na Dworcu Głównym i powoli klucząc  uliczkami znaleźć wszystkie największe atrakcje dawnego Gdańska. Po drodze napotkamy kawiarnie i kluby, w których skupia się tętniące życie Gdańska.
-                    <br />
-                    <strong>Pokażemy Ci najciekawsze z nich, bez których Twoja wyprawa nie może się obyć.</strong>
-                </p>
+    <!--Main content starts here -->
+    <main id="main">
+        <div class="container">
+            <div class="heading">
+                <h2 class="heading-title">
+                    Gdańskie zabytki - Daj się skusić!
+                </h2>
+                <div class="heading-text">
+                    Gdańskie Stare Miasto to wymarzone miejsce na spokojny spacer szlakiem zabytków. Możemy zacząć od razu na Dworcu Głównym i powoli klucząc  uliczkami znaleźć wszystkie największe atrakcje dawnego Gdańska. Po drodze napotkamy kawiarnie i kluby, w których skupia się tętniące życie Gdańska. <strong>Pokażemy Ci najciekawsze z nich, bez których Twoja wyprawa nie może się obyć.</strong>
+                </div>
             </div>
-
-            <div class="container"> <!-- Bootstrap Sample Content -->
-                <div class="row">
-                    <div class="col-md-5"><img class="img-thumbnail" src="images/main_image/1.jpg" alt="Długi Targ"> </div>
-                    <div class="col-md-7">
-                        <h3>Długi Targ</h3>
-                        <p>Reprezentacyjny plac w Gdańsku, w dzielnicy Śródmieście, na Głównym Mieście. Pełni funkcję rynku, jest przedłużeniem ul. Długiej, z którą tworzy tzw. Drogę Królewską.
-                        </p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <hr>
+        </div>
+        <div class="container">
+            <div class="row row-bottom">
+                <div class="col-md-6">
+                    <div class="monument">
+                        <div class="monument-picture">
+                            <img src="images/main_image/1.jpg" alt="Długi Targ">
+                        </div>
+                        <div class="monument-content">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <span class="monument-content-title">Długi Targ</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="monument-content-star" src="images/star.png" alt="">
+                                    <img class="monument-content-star" src="images/star.png" alt="">
+                                    <img class="monument-content-star" src="images/star.png" alt="">
+                                </div>
+                            </div>
+                            <span class="monument-content-desc">
+                                Reprezentacyjny plac w Gdańsku, w dzielnicy Śródmieście, na Głównym Mieście. Pełni funkcję rynku, jest przedłużeniem ul. Długiej, z którą tworzy tzw. Drogę Królewską.
+                            </span>
+                        </div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-md-5"><img class="img-thumbnail" src="images/main_image/2.jpg" alt="Żuraw"> </div>
-                    <div class="col-md-7">
-                        <h3>Żuraw</h3>
-                        <p> Zabytkowy dźwig portowy Gdańska, usadowiony pomiędzy pylonami Bramy Szerokiej nad Motławą. Jest jedną z filii Centralnego Muzeum Morskiego w Gdańsku. Jest to najstarszy zachowany dźwig portowy w Europie.
-                        </p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <hr>
+                <div class="col-md-6">
+                    <div class="monument">
+                        <div class="monument-picture">
+                            <img src="images/main_image/2.jpg" alt="Żuraw">
+                        </div>
+                        <div class="monument-content">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <span class="monument-content-title">Żuraw</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="monument-content-star" src="images/star.png" alt="">
+                                    <img class="monument-content-star" src="images/star.png" alt="">
+                                    <img class="monument-content-star" src="images/star.png" alt="">
+                                </div>
+                            </div>
+                            <span class="monument-content-desc">
+                                Zabytkowy dźwig portowy Gdańska, usadowiony pomiędzy pylonami Bramy Szerokiej nad Motławą. Jest jedną z filii Centralnego Muzeum Morskiego w Gdańsku. Jest to najstarszy zachowany dźwig portowy w Europie.
+                            </span>
+                        </div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-md-5"><img class="img-thumbnail" src="images/main_image/3.jpg" alt="Mariacka"> </div>
-                    <div class="col-md-7">
-                        <h3>Mariacka</h3>
-                        <p>Ulica w Gdańsku na Głównym Mieście, biegnąca przez historyczną Dzielnicę Mariacką. Ulica rozpoczyna się przy Bazylice Mariackiej i biegnie równoleżnikowo ku Motławie i zamykającej ją Bramie Mariackiej.
-                        </p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <hr>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="monument">
+                        <div class="monument-picture">
+                            <img src="images/main_image/3.jpg" alt="Mariacka">
+                        </div>
+                        <div class="monument-content">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <span class="monument-content-title">Mariacka</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="monument-content-star" src="images/star.png" alt="">
+                                    <img class="monument-content-star" src="images/star.png" alt="">
+                                    <img class="monument-content-star" src="images/star.png" alt="">
+                                </div>
+                            </div>
+                            <span class="monument-content-desc">
+                                Ulica w Gdańsku na Głównym Mieście, biegnąca przez historyczną Dzielnicę Mariacką. Ulica rozpoczyna się przy Bazylice Mariackiej i biegnie równoleżnikowo ku Motławie i zamykającej ją Bramie Mariackiej.
+                            </span>
+                        </div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-md-5"><img class="img-thumbnail" src="images/main_image/4.jpg" alt="Ratusz"> </div>
-                    <div class="col-md-7">
-                        <h3>Ratusz Głównego Miasta</h3>
-                        <p>Zabytkowy ratusz na Głównym Mieście w Gdańsku. Jest to gotycko-renesansowa budowla, usytuowana na styku ulicy Długiej i Długiego Targu, która dominuje nad panoramą Drogi Królewskiej, najbardziej reprezentacyjnego traktu tej części miasta. W ratuszu Głównego Miasta mieści się Muzeum Historyczne Miasta Gdańska.
-                        </p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <hr>
+                <div class="col-md-6">
+                    <div class="monument">
+                        <div class="monument-picture">
+                            <img src="images/main_image/4.jpg" alt="Ratusz">
+                        </div>
+                        <div class="monument-content">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <span class="monument-content-title">Ratusz</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="monument-content-star" src="images/star.png" alt="">
+                                    <img class="monument-content-star" src="images/star.png" alt="">
+                                    <img class="monument-content-star" src="images/star.png" alt="">
+                                </div>
+                            </div>
+                            <span class="monument-content-desc">
+                                Zabytkowy ratusz na Głównym Mieście w Gdańsku. Jest to gotycko-renesansowa budowla, usytuowana na styku ulicy Długiej i Długiego Targu, która dominuje nad panoramą Drogi Królewskiej.
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div> <!-- Bootstrap Sample Content ends here  -->
-        </main>
-        <!--Main content ends here -->
+            </div>
+        </div>
+    </main>
+    <!--Main content ends here -->
 
-        <div id="team" class="container about">
-           <div class="row">
+    <div id="team" class="about">
+        <div class="container">
+            <div class="row">
                 <div class="col-md-12">
-            <h2>Nasz Zespół</h2>
-            <p class="about-team">AA Team. 3 osoby, 3 żywioły. Z połączonych sił powstał nie Kapitan Planeta,<br /> lecz zespół Infoshare Academy który zanim opanuje świat, pragnie poznać nieco front-endowej magii;) </p>
-            </div>
+                    <div class="heading">
+                        <h2 class="heading-title">Nasz Zespół</h2>
+                        <span class="heading-text">AA Team. 3 osoby, 3 żywioły. Z połączonych sił powstał nie Kapitan Planeta,<br /> lecz zespół Infoshare Academy który zanim opanuje świat, pragnie poznać nieco front-endowej magii;) </span>
+                    </div>
                 </div>
+            </div>
 
             <div class="row">
                 <div class="about-box col-md-4">
                     <img src="images/about/lukasz.jpg" class="about-box-image" alt="Łukasz"/>
                     <h3>Łukasz</h3>
-                    <p>
-                        Chłopak z mazur, instruktor tańca, myśliwy i zakręcony gość - postanowił rozpocząć przygodę z front-end'em w Gdańsku. Ukończona Grafika i Multimedia Komputerowa, aktualnie pisze prace magisterską na Uniwersytecie Gdańskim - Informatyka i Ekonometria. Głowa pełna pomysłów, co owocuje różnorodnymi projektami.   Gotowy na współprace z najbardziej wymagającymi klientami;)</p>
-                        <a href="https://pl.linkedin.com/in/łukasz-kowalewski-298187100" target="_blank">
-                            <span class="linkedin-icon"></span>
-                        </a>
-                        <a href="https://github.com/endfreakzz" target="_blank">
-                            <span class="github-icon"></span>
-                        </a>
+                    <a href="https://pl.linkedin.com/in/łukasz-kowalewski-298187100" target="_blank">
+                        <span class="linkedin-icon"></span>
+                    </a>
+                    <a href="https://github.com/endfreakzz" target="_blank">
+                        <span class="github-icon"></span>
+                    </a>
+                    <p>Chłopak z mazur, instruktor tańca, myśliwy i zakręcony gość - postanowił rozpocząć przygodę z front-end'em w Gdańsku. Ukończona Grafika i Multimedia Komputerowa, aktualnie pisze prace magisterską na Uniwersytecie Gdańskim - Informatyka i Ekonometria. Głowa pełna pomysłów, co owocuje różnorodnymi projektami.   Gotowy na współprace z najbardziej wymagającymi klientami;)</p>
                 </div>
 
                 <div class="about-box col-md-4 ">
                     <img src="images/about/magda.jpg" class="about-box-image " alt="Magda"/>
                     <h3>Magda</h3>
-                    <p>Zakochana w świecie IT. Customer Relations Leader w firmie UXPin. Promuje ulepszanie Customer Experience jako integralnej części UX jak i całego procesu projektowania usług. Uwielbia pracować z developerami - krzyczy kiedy trzeba;) Perfekcjonistka, empatyczne stworzenie, miłośniczka tworzenia contentu dla użytkownika. W wolnym czasie oddana fanka literatury amerykańskiej i Mortal Kombat;)</p>
-                        <a href="https://pl.linkedin.com/in/magdalena-olszewska-a463ab96" target="_blank">
-                            <span class="linkedin-icon"></span>
-                        </a>
-                        <a href="https://github.com/molszewska" target="_blank">
-                            <span class="github-icon"></span>
-                        </a>
+                    <a href="https://pl.linkedin.com/in/magdalena-olszewska-a463ab96" target="_blank">
+                        <span class="linkedin-icon"></span>
+                    </a>
+                    <a href="https://github.com/molszewska" target="_blank">
+                        <span class="github-icon"></span>
+                    </a>
+                    <p>
+                        Zakochana w świecie IT. Customer Relations Leader w firmie UXPin. Promuje ulepszanie Customer Experience jako integralnej części UX jak i całego procesu projektowania usług. Uwielbia pracować z developerami - krzyczy kiedy trzeba;) Perfekcjonistka, empatyczne stworzenie, miłośniczka tworzenia contentu dla użytkownika. W wolnym czasie oddana fanka literatury amerykańskiej i Mortal Kombat;)
+                    </p>
                 </div>
 
                 <div class="about-box col-md-4">
                     <img src="images/about/michal.jpg" class="about-box-image" alt="Michał"/>
                     <h3>Michał</h3>
-                    <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
-                        <a href="" target="_blank">
-                            <span class="linkedin-icon"></span>
-                        </a>
-                        <a href="https://github.com/Zaxaar" target="_blank">
-                            <span class="github-icon"></span>
-                        </a>
+                    <a href="" target="_blank">
+                        <span class="linkedin-icon"></span>
+                    </a>
+                    <a href="https://github.com/Zaxaar" target="_blank">
+                        <span class="github-icon"></span>
+                    </a>
+                    <p>
+                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                    </p>
                 </div>
-            </div> <!--row-->
-        </div>
-        
-        <!--Footer starts here -->
-        <footer id="footer">
-        	<div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3>
-                            <span class="fa fa-wpforms"> </span> Fotografie
-                        </h3>
-                        <ul>
-                            <li>
-                                <h4>Adrianna Wolszon
-                                <br><a class="small" href="http://bluecanvas.pl/498-adrianna-wolszon" target="_blank">Zobacz więcej prac</a></h4>
-                            </li>
-                            <li>
-                                <h4>Mariusz Wilkowski
-                                <br><a class="small" href="http://www.mariuszwilkowski.com/" target="_blank">Zobacz więcej prac</a></h4>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-6">
-                        <h3>
-                            <span class="fa fa-envelope-o"></span> Spamletter
-                        </h3>
-                        <form action="" class="contact-form" method="get"> <!-- formularz z bajearmi-->
-                            <p>Daj znać jeśli chcesz, żebyśmy wysłali Ci trochę spamu.</p>
-                            <div class="form-group form-inline" >
-                                <div class="input-group form-field">
-                                    <span class="input-group-addon" id="user-name">Imię</span>
-                                    <input type="text" class="form-control locked" placeholder="Steve" aria-describedby="user-name" required disabled>
-                                </div>
-
-                                <div class="input-group form-field" >
-                                    <span class="input-group-addon" id="user-email">Email</span>
-                                    <input type="email" class="form-control locked" placeholder="email@domain.com" aria-describedby="user-email" required disabled>
-                                </div>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" required class="antibot" /><em>Uwielbiam dostawać śmieci na maila</em></label>
-                            </div>
-                            <button type="submit" class="btn btn-default"><i class="fa fa-envelope-o" aria-hidden="true"></i> wyślij</button>
-                        </form>
-                    </div> <!-- W tym miejscu kończy się kolumna formularza z bajerami-->
-                </div> <!-- ...a tu kończy sie cały wiersz/row w którym znajdują się obydwa formularze -->
-
-                <hr>
-                <!--<h3>stopka</h3>-->
-                <!--<i class="fa fa-copyright" aria-hidden="true">&copy; Copyright 2016</i>-->
-                <!--<p>Footer text placeholder.</p>-->
-
-                <p class="social-icons">
-                    <a href="http://facebook.com" target="_blank" class="social-icons-link">
-                        <span class="facebook-icon"></span>
-                    </a>
-                    <a href="http://twitter.com" target="_blank" class="social-icons-link">
-                        <span class="twitter-icon"></span>
-                    </a>
-                    <a href="http://plus.google.com" target="_blank" class="social-icons-link">
-                        <span class="google-icon"></span>
-                    </a>
-                </p>
-                <div class="copyright">
-                    &copy; 2016 by AA_Team
-                </div>
-
-                <p class="back">
-                    <a href="#top" class="back-link">
-                        <span class="back-link-icon"></span>
-                    </a>
-                </p>
             </div>
-        </footer>
-        <!--Footer ends here -->
-
-        <div id="cookies-alert" class="alert alert-warning alert-dismissible cookies text-center" role="alert">
-            <p>Witryna www.zabytki-gdanska.pl wykorzystuje pliki cookies w celu poprawnej realizacji dostarczanych usług i informacji oraz w celach gromadzenia anonimowych informacji statystycznych.</p><br>
-            <button type="button" class="btn close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <button type="button" id="cookies-confirm" class="btn accept" data-dismiss="alert" aria-label="Close">Akceptuję</button>
-
         </div>
+    </div>
+
+    <!--Footer starts here -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>
+                        <span class="fa fa-wpforms"> </span> Fotografie
+                    </h3>
+                    <ul>
+                        <li>
+                            <h4>Adrianna Wolszon
+                            <br><a href="http://bluecanvas.pl/498-adrianna-wolszon" target="_blank">Zobacz więcej prac</a></h4>
+                        </li>
+                        <li>
+                            <h4>Mariusz Wilkowski
+                            <br><a href="http://www.mariuszwilkowski.com/" target="_blank">Zobacz więcej prac</a></h4>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <h3>
+                        <span class="fa fa-envelope-o"></span> Spamletter
+                    </h3>
+                    <form action="" class="contact-form" method="get"> <!-- formularz z bajearmi-->
+                        <p>Daj znać jeśli chcesz, żebyśmy wysłali Ci trochę spamu.</p>
+                        <div class="form-group form-inline" >
+                            <div class="input-group form-field">
+                                <span class="input-group-addon" id="user-name">Imię</span>
+                                <input type="text" class="form-control locked" placeholder="Steve" aria-describedby="user-name" required disabled>
+                            </div>
+
+                            <div class="input-group form-field" >
+                                <span class="input-group-addon" id="user-email">Email</span>
+                                <input type="email" class="form-control locked" placeholder="email@domain.com" aria-describedby="user-email" required disabled>
+                            </div>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" required class="antibot" /><em>Uwielbiam dostawać śmieci na maila</em></label>
+                        </div>
+                        <button type="submit" class="btn btn-default"><i class="fa fa-envelope-o" aria-hidden="true"></i> wyślij</button>
+                    </form>
+                </div> <!-- W tym miejscu kończy się kolumna formularza z bajerami-->
+            </div> <!-- ...a tu kończy sie cały wiersz/row w którym znajdują się obydwa formularze -->
+
+            <hr>
+            <!--<h3>stopka</h3>-->
+            <!--<i class="fa fa-copyright" aria-hidden="true">&copy; Copyright 2016</i>-->
+            <!--<p>Footer text placeholder.</p>-->
+
+            <p class="social">
+                <a href="http://facebook.com" target="_blank" class="social-icons-link">
+                    <span class="social-icon facebook-icon"></span>
+                </a>
+                <a href="http://twitter.com" target="_blank" class="social-icons-link">
+                    <span class="social-icon twitter-icon"></span>
+                </a>
+                <a href="http://plus.google.com" target="_blank" class="social-icons-link">
+                    <span class="social-icon google-icon"></span>
+                </a>
+            </p>
+            <div class="copyright">
+                &copy; 2016 by AA_Team
+            </div>
+
+            <p class="back">
+                <a href="#top" class="back-link">
+                    <span class="back-link-icon"></span>
+                </a>
+            </p>
+        </div>
+    </footer>
+    <!--Footer ends here -->
+
+    <div id="cookies-alert" class="alert alert-warning alert-dismissible cookies text-center" role="alert">
+        <p>Witryna www.zabytki-gdanska.pl wykorzystuje pliki cookies w celu poprawnej realizacji dostarczanych usług i informacji oraz w celach gromadzenia anonimowych informacji statystycznych.</p><br>
+        <button type="button" class="btn close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button type="button" id="cookies-confirm" class="btn accept" data-dismiss="alert" aria-label="Close">Akceptuję</button>
+
+    </div>
     
     <!-- Scripts -->
     	<script src="http://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
