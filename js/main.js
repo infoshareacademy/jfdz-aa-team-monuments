@@ -13,7 +13,7 @@ function initMenuToggle() {
 
 function initMenuScroll(){
     $('body').scrollspy({target: ".navbar", offset: 50});
-    $(".navbar a, .back a").on('click', function(event) {
+    $(".navbar a, .back a, .action-call").on('click', function(event) {
         if (this.hash !== "") {
             event.preventDefault();
 
