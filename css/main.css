@@ -13,8 +13,7 @@ body {
 .main-nav li {
 	font-size: 18px;
 	margin-top: 5px;
-	text-shadow: rgba(0,0,0,0.2) 0 0 7px /* Proszę nie usuwać tego cienia. Dodaję go chyba z czwarty raz.
-											- To jest jeden z tasków w sprincie! >>>>> FZ2A-17 */
+	text-shadow: rgba(0,0,0,0.2) 0 0 7px /* Proszę nie usuwać tego cienia. Dodaję go chyba z czwarty raz. - To jest jeden z tasków w sprincie! >>>>> FZ2A-17 */
 }
 
 .container h2 {
