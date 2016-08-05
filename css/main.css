@@ -7,26 +7,62 @@ body {
 }
 
 .main-nav {
+	background-color: #1f2236;
 	box-shadow: rgba(13,11,11,0.3) 0 0 12px;
+	border-color: transparent;
 }
 
-.main-nav li {
-	font-size: 18px;
+.navbar-nav li.main-nav-item > a {
+	font-size: 16px;
 	margin-top: 5px;
-	text-shadow: rgba(0,0,0,0.2) 0 0 7px /* Proszę nie usuwać tego cienia. Dodaję go chyba z czwarty raz. - To jest jeden z tasków w sprincie! >>>>> FZ2A-17 */
+	color: #ceb078;
+	text-shadow: rgba(0,0,0,0.2) 0 0 7px;
 }
 
-.container h2 {
+.navbar-nav li.main-nav-item > a:hover, .navbar-nav li.main-nav-item > a:focus {
+	color: #d9bb89;
+}
+
+.navbar-default .navbar-nav > .active > a {
+	color: #ffffff;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #f7f7f7;
+	background-color: transparent;
+}
+
+.heading {
 	text-align: center;
-	padding-bottom: 30px;
+	margin: 0 0 40px;
 }
 
-.container p {
-	font-size: 15px;
+.heading-title {
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 38px;
+	display: block;
+	margin-bottom: 10px;
 }
 
-.main-content-intro {
+.heading-title:after {
+	content: '';
+	display: block;
 	text-align: center;
+	background: url("../images/separator.png");
+	width: 96px;
+	height: 12px;
+	margin: 15px auto 35px;
+}
+
+.heading-text {
+	line-height: 28px;
+	font-size: 16px;
+}
+
+.heading-text strong {
+	display: block;
 }
 
 .navbar-headline {
@@ -34,14 +70,10 @@ body {
 	display: inline-block;
 }
 .navbar-logo {
-	height: 80px;
-	z-index: 10;
-}
-.navbar-name {
-	color: #414141;
-	font-family: 'Lato', sans-serif;
-	font-size: 28px;
-	font-weight: 400;
+	height: 50px;
+	width: 136px;
+	position: relative;
+	top: 5px;
 }
 
 /* Super Hyper Big Fat Teaser Image Style */
@@ -49,6 +81,16 @@ body {
 	width: 100%;
 	padding: 0;
 	background-color: #ffffff;
+	position: relative;
+}
+
+.teaser-image:before {
+	background: rgba(31,34,54,0.6);
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	content: '';
+	position: absolute;
 }
 
 .teaser-image {
@@ -56,27 +98,34 @@ body {
 	background-position: center;
 	background-size: cover;
 	transition: 2s ease;
+	position: relative;
 }
 
 .teaser-text {
 	padding: 15% 10px 25%;
 	color: #FFF;
+	position: relative;
 }
 
 .teaser-text h1 {
-	font-size: 45px;
+	font-size: 48px;
+	color: #ffffff;
 }
 
 .teaser-text p {
-	font-size: 18px;
+	margin-top: 20px;
+	font-size: 20px;
+	color: #ceb078;
 	font-weight: 300;
+	line-height: 28px;
 }
 
 .btn-cta {
     color: #fff;
+	text-transform: uppercase;
     background: transparent;
     border-color: #fff;
-    padding: 17px 32px;
+    padding: 12px 42px;
     transition: all 0.2s ease-in-out;
     position: relative;
     top: 50px;
@@ -93,46 +142,43 @@ body {
 main {
 	background-color:#FAFCFB;
 	padding: 60px 0 30px;
-	border-bottom: 1px solid #eee;
-	}
-main p {
-	padding-bottom: 10px ;
-}
-	
-section {
-	background-color:#999;
-	padding: 15px 0;
-	}
-
-footer {
-	background-color:#2F343B;
-	padding: 15px 0;
-	color: #7E827A;
-
 }
 
-footer hr {
-	border-top: 1px solid #4D5259;
+.row-bottom {
+	padding-bottom: 30px;
+}
+
+.monument {
+	display: block;
+	border: 1px solid #ddd;
+}
+
+.monument-picture img{
+	width: 100%;
+	height: auto;
+}
+
+.monument-content {
+	padding: 30px;
+}
+
+.monument-content-title {
+	display: block;
+	font-size: 20px;
+	line-height: 30px;
+	color: #ad5a55;
+	padding-bottom: 10px;
+}
+
+.monument-content-star {
+	width: 20px;
+	height: 19px;
 }
 
 .about {
 	text-align: center;
-	background-color: #fff;
+	background-color: #F9F8F4;
 	padding-top: 60px;
-}
-
-.about h2 {
-	padding-bottom: 30px;
-}
-
-footer h3{
-	padding: 10px 0;
-}
-
-.about-team {
-	padding-bottom: 30px;
-	font-size: 15px;
-	line-height: 28px;
 }
 
 .about-box {
@@ -149,6 +195,7 @@ footer h3{
 
 .about-box h3 {
 	padding-bottom: 10px;
+	color: #ad5a55;
 }
 
 .about-box p {
@@ -181,6 +228,34 @@ footer h3{
 }
 
 /* Form styles */
+
+footer {
+	background-color:#1f2236;
+	padding: 15px 0;
+	color: #7E827A;
+
+}
+
+footer hr {
+	border-top: 1px solid #52566e;;
+}
+
+footer h3{
+	padding: 10px 0;
+	color: #ffffff;
+}
+
+footer h4 {
+	color: #ffffff;
+}
+
+footer h4 a {
+	color: #ceb078;
+	font-weight: 300;
+	line-height: 24px;
+	font-size: 16px;
+}
+
 .contact-form {
 	background-color: #e7e7e7;
 	border-radius: 5px;
@@ -194,39 +269,32 @@ footer h3{
 
 /* Form styles ends here*/
 
-.social-icons {
+.social {
 	text-align: center;
 }
 
-.social-icons a:hover {
+.social a:hover {
 	text-decoration: none;
 }
-
-.facebook-icon {
-	background: url("../images/social_icons/facebook.svg");
-	background-size: 30px;
-	height: 30px;
-	width: 30px;
+.social-icon {
+	height: 24px;
+	width: 24px;
 	display:inline-block;
 	margin-right: 3px;
+}
+.facebook-icon {
+	background: url("../images/social_icons/facebook.svg");
+	background-size: 24px 24px;
 }
 
 .twitter-icon {
 	background: url("../images/social_icons/twitter.svg");
-	background-size: 30px;
-	height: 30px;
-	width: 30px;
-	display:inline-block;
-	margin-right: 3px;
+	background-size: 24px 24px;
 }
 
 .google-icon {
 	background: url("../images/social_icons/google.svg");
-	background-size: 35px;
-	height: 35px;
-	width: 35px;
-	display:inline-block;
-	vertical-align: center;
+	background-size: 24px 24px;
 }
 
 .social-icons-link {
@@ -271,6 +339,7 @@ footer h3{
 }
 .copyright {
 	text-align: center;
+	color: #52566e;
 }
 
 .cookies {
