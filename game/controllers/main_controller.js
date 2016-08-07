@@ -1,22 +1,27 @@
-
 var gameCanvas;
 var gameCanvasContext;
-var frameRate = 17;
 
+var frameRate = 8;
 var score = 0;
 
+var bottleSpeed = 1;
 var bottles = [
     {
-        id: 1,
         positionX: Math.floor(Math.random()*780),
         positionY:0,
-        speed: 2, },
-
+    },
     {
-        id: 2,
         positionX: Math.floor(Math.random()*780),
-        positionY:0,
-        speed: 2, }
+        positionY:-100,
+    },
+    {
+        positionX: Math.floor(Math.random()*780),
+        positionY:-200,
+    },
+    {
+        positionX: Math.floor(Math.random()*780),
+        positionY:-300,
+    },
 ];
 
 var hero = {
@@ -37,14 +42,12 @@ $(window).load(function(){
     gameCanvasContext = gameCanvas.getContext('2d');
 
     setInterval(function(){
+        gameCanvasContext.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
         paintStage();
         paintBottles();
         paintHero();
-        moveStage();
         moveHero();
-        getPoint()
     },frameRate);
-
 
     gameCanvas.addEventListener('mousemove' , function(evt){
         var mousePosition = calculateMousePosition(evt);
@@ -57,60 +60,47 @@ $(window).load(function(){
 
 function paintStage(){
         //Background
-        drawRect(0, 0, gameCanvas.width, gameCanvas.height, 'grey')
+        drawRect(0, 0, gameCanvas.width, gameCanvas.height, 'green')
 }
 
-function moveStage(){
-
-}
-
+//Bootles draw and movement functions
 function paintBottles() {
+
     for (var i = 0; i < bottles.length; i++) {
-            positionX = bottles[i].positionX;
-            positionY = bottles[i].positionY;
-         //  setTimeout( function( positionX, positionY ){
-                drawRect(positionX, positionY, 20, 35, 'blue');
-          //    } , 3000 + Math.random() * 5000, bottles[i].positionX, bottles[i].positionY );
+        var positionX = bottles[i].positionX;
+        var positionY = bottles[i].positionY;
+        var heroRange = positionX > hero.positionX - 40 && positionX < hero.positionX + 40 && positionY == gameCanvas.height -46;
+
+        if (positionY < gameCanvas.height-45) {
+            drawRect(positionX, positionY, 20, 35, 'blue');
+            moveBottle(i);
+
+            if (heroRange) {
+                score +=10;
+                $('#score').text(score);
+                console.log("score: " + score);
+            }
+
+            else if (positionY === gameCanvas.height-46 && !heroRange) {
+                hero.health -= 10;
+                $('#health').text(hero.health);
+                console.log("Hero health: " + hero.health);
+            }
+        }
     }
+};
+
+function moveBottle(elem) {
+    bottles[elem].positionY = bottles[elem].positionY + bottleSpeed;
 }
-
-bottles.forEach(moveBottle);
-
-function moveBottle(element) {
-    console.log(element.id);
-
-    element.positionY = element.positionY + element.speed;
-
-    if(element.positionY > 600) {
-       element.speed =  -element.speed;
-    }
-    else if(element.positionY < 0) {
-        element.speed = -element.speed;
-    }
-}
-
-
-//Bootles movement function
-function moveBottles(arrIndex) {
-    bottles[arrIndex].positionY = bottles[arrIndex].positionY + bottles[arrIndex].speed;
-
-    if(bottles[arrIndex].positionY > gameCanvas.height) {
-        bottles[arrIndex].speed =  -bottles[arrIndex].speed;
-    }
-    else if(bottles[arrIndex].positionY < 0) {
-        bottles[arrIndex].speed = -bottles[arrIndex].speed;
-    }
-}
-
 
 function paintHero(){
     //Elmo
-    drawCircle(hero.positionX, gameCanvas.height-40, 25, 'brown');
-    drawCircle(hero.positionX-10, gameCanvas.height-40, 9, 'white');
-    drawCircle(hero.positionX-10, gameCanvas.height-40, 5, 'black');
-    drawCircle(hero.positionX+10, gameCanvas.height-40, 9, 'white');
-    drawCircle(hero.positionX+10, gameCanvas.height-40, 5, 'black');
-    drawRect(hero.positionX-25, gameCanvas.height - 65, 50, 50, 'rgba(20, 14, 44, 0.3)');
+    drawCircle(hero.positionX, gameCanvas.height-50, 40, 'brown');
+    drawCircle(hero.positionX-15, gameCanvas.height-45, 13, 'white');
+    drawCircle(hero.positionX-15, gameCanvas.height-45, 5, 'black');
+    drawCircle(hero.positionX+15, gameCanvas.height-45, 13, 'white');
+    drawCircle(hero.positionX+15, gameCanvas.height-45, 5, 'black');
 }
 
 function moveHero() {
@@ -165,20 +155,8 @@ function calculateMousePosition(evt) {
     };
 }
 
-function getPoint(){
-    var heroCurrentPosition = hero.positionX - 25 && gameCanvas.height - 6;
-    var bottleCurrentPosition = bottles.positionX;
-
-    if (bottles.positionX > hero.positionX - 25 && bottles.positionX < hero.positionX + 25 && bottles.positionY > gameCanvas.height -50) {
-        score +=10;
-        $('#score').text(score);
-        console.log("score: " + score)
-    }
-}
-
 // Drawing functions
 function drawRect(left, top, width, height, drawColor) {
-    console.log( left, top );
     gameCanvasContext.fillStyle = drawColor;
     gameCanvasContext.fillRect(left, top, width, height)
 }
