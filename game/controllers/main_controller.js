@@ -8,19 +8,19 @@ var bottleSpeed = 1;
 var bottles = [
     {
         positionX: Math.floor(Math.random()*780),
-        positionY:0,
+        positionY:0
     },
     {
         positionX: Math.floor(Math.random()*780),
-        positionY:-100,
+        positionY:-100
     },
     {
         positionX: Math.floor(Math.random()*780),
-        positionY:-200,
+        positionY:-200
     },
     {
         positionX: Math.floor(Math.random()*780),
-        positionY:-300,
+        positionY:-300
     },
 ];
 
@@ -30,7 +30,7 @@ var hero = {
     health: 999,
     speed: 0,
     animationSpeed : 17,
-}
+};
 
 $(window).load(function(){
     console.log('Welcome to MyGame!');
@@ -69,29 +69,29 @@ function paintBottles() {
     for (var i = 0; i < bottles.length; i++) {
         var positionX = bottles[i].positionX;
         var positionY = bottles[i].positionY;
-        var heroRange = positionX > hero.positionX - 40 && positionX < hero.positionX + 40 && positionY == gameCanvas.height -46;
+        var heroRange = positionX > hero.positionX - 45 && positionX < hero.positionX + 45;
 
         if (positionY < gameCanvas.height-45) {
             drawRect(positionX, positionY, 20, 35, 'blue');
             moveBottle(i);
 
-            if (heroRange) {
+            if (positionY == gameCanvas.height -46 && heroRange) {
                 score +=10;
                 $('#score').text(score);
                 console.log("score: " + score);
             }
 
-            else if (positionY === gameCanvas.height-46 && !heroRange) {
+            else if (positionY == gameCanvas.height-46 && !heroRange) {
                 hero.health -= 10;
                 $('#health').text(hero.health);
                 console.log("Hero health: " + hero.health);
             }
         }
     }
-};
+}
 
 function moveBottle(elem) {
-    bottles[elem].positionY = bottles[elem].positionY + bottleSpeed;
+    bottles[elem].positionY += bottleSpeed;
 }
 
 function paintHero(){
@@ -111,13 +111,12 @@ function moveHero() {
 //Hero movement functions
 function moveHeroLeft() {
     if (hero.positionX > 0){
-        hero.positionX = hero.positionX - hero.speed;
+        hero.positionX -= hero.speed;
     }
 }
-
 function moveHeroRight() {
     if (hero.positionX < gameCanvas.width){
-        hero.positionX = hero.positionX + hero.speed;
+        hero.positionX += hero.speed;
     }
 }
 
