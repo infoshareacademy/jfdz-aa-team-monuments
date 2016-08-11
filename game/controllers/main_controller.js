@@ -29,7 +29,7 @@ var hero = {
     positionY:760,
     health: 999,
     speed: 0,
-    animationSpeed : 17,
+    animationSpeed : 17
 };
 
 $(window).load(function(){
