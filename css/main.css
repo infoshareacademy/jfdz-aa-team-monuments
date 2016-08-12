@@ -156,6 +156,8 @@ main {
 .monument-picture img{
 	width: 100%;
 	height: auto;
+	opacity: 0;
+	transition: All 4s ease;
 }
 
 .monument-content {
