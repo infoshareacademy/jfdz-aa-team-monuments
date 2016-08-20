@@ -235,20 +235,18 @@ footer {
 	background-color:#1f2236;
 	padding: 15px 0;
 	color: #7E827A;
-
 }
 
-footer hr {
-	border-top: 1px solid #52566e;;
-}
-
-footer h3{
-	padding: 10px 0;
-	color: #ffffff;
+footer ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 footer h4 {
-	color: #ffffff;
+	color: #BCBFCF;
+	padding-bottom: 15px;
+	margin-left: 10px;
 }
 
 footer h4 a {
@@ -258,15 +256,76 @@ footer h4 a {
 	font-size: 16px;
 }
 
+footer h4 a:hover {
+	color: #fff;
+}
+
 .contact-form {
-	background-color: #e7e7e7;
-	border-radius: 5px;
-	padding: 15px;
+	background-color: #1f2236;
+	padding: 0 15px;
 	margin-bottom: 15px;
 }
 
 .form-field {
 	margin-top:10px;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.form-control.locked {
+	background-color: #1f2236;
+	color: #BCBFCF;
+}
+
+.form-control.locked::-webkit-input-placeholder {
+	color: #BCBFCF;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	color: #BCBFCF;
+}
+
+.input-group-addon {
+	background-color: #1f2236;
+	color: #BCBFCF;
+}
+
+.form-text {
+	color: #BCBFCF;
+}
+
+.checkbox {
+	display: inline-block;
+}
+
+.pull-right {
+	text-align: right;
+}
+
+.btn-default {
+	background-color: #1f2236;
+	color: #fff;
+	border-color: #fff;
+	margin-top: 5px;
+	padding: 10px 35px;
+}
+
+.btn-default:focus, .btn-default:hover {
+	background: rgba(233, 233, 233, 0.1);
+	color: #fff;
+}
+
+.separator-first {
+	border-top: 1px solid #52566e;
+	margin-bottom: 1px;
+}
+
+.separator-second {
+	border-top: 1px solid #52566e;
+	margin-top: 0;
+	padding-bottom: 20px;
 }
 
 /* Form styles ends here*/
@@ -306,12 +365,12 @@ footer h4 a {
 
 .back {
 	text-align: right;
-	padding: 20px 0;
-	font-size: 15px;
+	padding: 10px 0;
+	font-size: 10px;
 	margin-top: 2px;
 	position: fixed;
-	bottom: 0;
-	right: 15px;
+	bottom: 5px;
+	right: 20px;
 }
 
 .back-link {
