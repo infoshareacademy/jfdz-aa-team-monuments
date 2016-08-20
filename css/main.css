@@ -70,11 +70,13 @@ body {
 	display: inline-block;
 }
 .navbar-logo {
-	height: 50px;
-	width: 136px;
-	position: relative;
-	top: 5px;
+	background: url(../images/logo/new_logo.svg);
+	height: 52px;
+	width: 141px;
+	display: inline-block;
+	margin-top: 3px;
 }
+
 
 /* Super Hyper Big Fat Teaser Image Style */
 .teaser {
