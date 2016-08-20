@@ -33,6 +33,36 @@ body {
 	background-color: transparent;
 }
 
+.monuments-icon {
+	background: url(../images/zabytki.svg);
+	height: 18px;
+	width: 18px;
+	display: inline-block;
+	margin-right: 5px;
+	position: relative;
+	top: 2px;
+}
+
+.about-us-icon {
+	background: url(../images/onas.svg);
+	height: 18px;
+	width: 18px;
+	display: inline-block;
+	margin-right: 5px;
+	position: relative;
+	top: 2px;
+}
+
+.contact-icon {
+	background: url(../images/kontakt.svg);
+	height: 18px;
+	width: 18px;
+	display: inline-block;
+	margin-right: 5px;
+	position: relative;
+	top: 2px;
+}
+
 .heading {
 	text-align: center;
 	margin: 0 0 40px;
@@ -76,7 +106,6 @@ body {
 	display: inline-block;
 	margin-top: 3px;
 }
-
 
 /* Super Hyper Big Fat Teaser Image Style */
 .teaser {
