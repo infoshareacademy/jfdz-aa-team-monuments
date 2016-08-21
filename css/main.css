@@ -187,8 +187,6 @@ main {
 .monument-picture img{
 	width: 100%;
 	height: auto;
-	opacity: 0;
-	transition: All 4s ease;
 }
 
 .monument-content {
@@ -450,4 +448,14 @@ footer h4 a:hover {
 }
 #cookies-alert {
     border-color: #c5c2c2;
+}
+
+.animation-element {
+	opacity: 0;
+	transition: All 3s ease;
+}
+
+.animation-element-active {
+	opacity: 1;
+	transition: All 3s ease;
 }
