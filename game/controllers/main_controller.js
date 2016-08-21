@@ -5,6 +5,7 @@ var frameRate = 8;
 var score = 0;
 
 var bottleSpeed = 1;
+
 var bottles = [
     {
         positionX: Math.floor(Math.random()*780),
@@ -41,13 +42,14 @@ $(window).load(function(){
     gameCanvas = document.getElementById('game-canvas');
     gameCanvasContext = gameCanvas.getContext('2d');
 
-    setInterval(function(){
+     setInterval(function(){
         gameCanvasContext.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
         paintStage();
         paintBottles();
         paintHero();
         moveHero();
     },frameRate);
+
 
     gameCanvas.addEventListener('mousemove' , function(evt){
         var mousePosition = calculateMousePosition(evt);
