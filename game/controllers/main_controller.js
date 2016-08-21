@@ -168,3 +168,4 @@ function drawCircle(left, top, radius, drawColor) {
     gameCanvasContext.arc(left, top, radius, 0, Math.PI*2, true);
     gameCanvasContext.fill();
 }
+
