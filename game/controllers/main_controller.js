@@ -5,24 +5,15 @@ var frameRate = 8;
 var score = 0;
 
 var bottleSpeed = 1;
-var bottles = [
-    {
+
+var bottles = [];
+
+for (var i = 0; i<10; i++) {
+    bottles.push({
         positionX: Math.floor(Math.random()*780),
-        positionY:0
-    },
-    {
-        positionX: Math.floor(Math.random()*780),
-        positionY:-100
-    },
-    {
-        positionX: Math.floor(Math.random()*780),
-        positionY:-200
-    },
-    {
-        positionX: Math.floor(Math.random()*780),
-        positionY:-300
-    },
-];
+        positionY: i * -100
+    });
+}
 
 var hero = {
     positionX: 400,
