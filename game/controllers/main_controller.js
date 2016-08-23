@@ -5,24 +5,8 @@ var frameRate = 8;
 var score = 0;
 
 var bottleSpeed = 1;
-var bottles = [
-    {
-        positionX: Math.floor(Math.random()*780),
-        positionY:0
-    },
-    {
-        positionX: Math.floor(Math.random()*780),
-        positionY:-100
-    },
-    {
-        positionX: Math.floor(Math.random()*780),
-        positionY:-200
-    },
-    {
-        positionX: Math.floor(Math.random()*780),
-        positionY:-300
-    },
-];
+
+var bottles = [];
 
 var hero = {
     positionX: 400,
@@ -32,31 +16,51 @@ var hero = {
     animationSpeed : 17
 };
 
-$(window).load(function(){
-    console.log('Welcome to MyGame!');
+var interval;
 
-    console.log(bottles[0]);
-    console.log(bottles[1]);
+$('#restart').click(startGame);
+$(window).load(startGame);
 
-    gameCanvas = document.getElementById('game-canvas');
-    gameCanvasContext = gameCanvas.getContext('2d');
+function startGame () {
 
-    setInterval(function(){
-        gameCanvasContext.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
-        paintStage();
-        paintBottles();
-        paintHero();
-        moveHero();
-    },frameRate);
+    bottles = [];
 
-    gameCanvas.addEventListener('mousemove' , function(evt){
-        var mousePosition = calculateMousePosition(evt);
-        hero.positionX = mousePosition.x;
-    });
+    for (var i = 0; i<10; i++) {
+        bottles.push({
+            positionX: Math.floor(Math.random()*780),
+            positionY: i * -100
+        });
+    }
 
-    window.addEventListener('keydown',keydownMove,false);
-    window.addEventListener('keyup',keyupMove,false);
-});
+        console.log('Welcome to MyGame!');
+
+        console.log(bottles[0]);
+        console.log(bottles[1]);
+
+        gameCanvas = document.getElementById('game-canvas');
+        gameCanvasContext = gameCanvas.getContext('2d');
+
+    if (interval) {
+        clearInterval(interval);
+    }
+
+        interval = setInterval(function(){
+            gameCanvasContext.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
+            paintStage();
+            paintBottles();
+            paintHero();
+            moveHero();
+        },frameRate);
+
+        gameCanvas.addEventListener('mousemove' , function(evt){
+            var mousePosition = calculateMousePosition(evt);
+            hero.positionX = mousePosition.x;
+        });
+
+        window.addEventListener('keydown',keydownMove,false);
+        window.addEventListener('keyup',keyupMove,false);
+}
+
 
 function paintStage(){
         //Background
