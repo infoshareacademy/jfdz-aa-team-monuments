@@ -24,10 +24,7 @@ $( document ).ready(function() {
 
     var interval;
 
-    $('#restart').click(startGame);
-    $(window).load(startGame);
-
-    function startGame () {
+    var startGame = function() {
 
         bottles = [];
 
@@ -169,4 +166,7 @@ $( document ).ready(function() {
         gameCanvasContext.fill();
     }
 
+    $('#restart-btn').click(startGame);
+    $('#start-btn').click(startGame);
+    
 });
