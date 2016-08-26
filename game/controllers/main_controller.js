@@ -23,8 +23,9 @@ $( document ).ready(function() {
 
     var interval;
 
-    drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#845D91');
-    drawText('AA_Team Game', '70px Impact', 'white', 'right' , 180, gameCanvas.height/2 );
+    drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#D13208');
+    drawImageElement('images/beers.png',340,130, 150, 150);
+    drawText('AA Team', '45px Impact, Charcoal, sans-serif', '#E9AD0E', 'center' , 340, 340 );
 
 
     var startGame = function() {
@@ -58,7 +59,7 @@ $( document ).ready(function() {
 
             window.addEventListener('keydown',keydownMove,false);
             window.addEventListener('keyup',keyupMove,false);
-    }
+    };
 
     function paintStage(){
             //Background
@@ -176,7 +177,16 @@ $( document ).ready(function() {
         gameCanvas.textAlign = align;
         gameCanvasContext.fillText(text, left, top);
     }
-    
+
+    function drawImageElement(imagePath, left, top, scaleX, scaleY) {
+        var img = new Image();
+
+        img.onload = function() {
+            gameCanvasContext.drawImage(img, left, top, scaleX, scaleY);
+        };
+        img.src = imagePath;
+    }
+
     $('#restart-btn').click(startGame);
     $('#start-btn').click(startGame);
 
