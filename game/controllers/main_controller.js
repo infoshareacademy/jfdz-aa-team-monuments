@@ -11,7 +11,6 @@ $( document ).ready(function() {
     var score = 0;
 
     var bottleSpeed = 1;
-
     var bottles = [];
 
     var hero = {
@@ -23,6 +22,10 @@ $( document ).ready(function() {
     };
 
     var interval;
+
+    drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#845D91');
+    drawText('AA_Team Game', '70px Impact', 'white', 'right' , 180, gameCanvas.height/2 );
+
 
     var startGame = function() {
 
@@ -59,7 +62,8 @@ $( document ).ready(function() {
 
     function paintStage(){
             //Background
-            drawRect(0, 0, gameCanvas.width, gameCanvas.height, 'green')
+            drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#90C3D4');
+            drawRect(0, gameCanvas.height-45, gameCanvas.width, 45, '#4AA840');
     }
 
     //Bootles draw and movement functions
@@ -166,7 +170,14 @@ $( document ).ready(function() {
         gameCanvasContext.fill();
     }
 
+    function drawText(text, font, color, align, left, top ) {
+        gameCanvasContext.font = font;
+        gameCanvasContext.fillStyle = color;
+        gameCanvas.textAlign = align;
+        gameCanvasContext.fillText(text, left, top);
+    }
+    
     $('#restart-btn').click(startGame);
     $('#start-btn').click(startGame);
-    
+
 });
