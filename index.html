@@ -25,14 +25,27 @@
                         <span class="glyphicon glyphicon-menu-hamburger"></span>
                     </div>
                     <a class="navbar-headline" href="#top">
-                        <img class="navbar-logo" src="images/logo/new_logo.png" alt="logo">
+                        <span class="navbar-logo"></span>
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="mainNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="main-nav-item"><a href="#main">Zabytki</a></li>
-                        <li class="main-nav-item"><a href="#team">O nas</a></li>
-                        <li class="main-nav-item"><a href="#footer">Kontakt</a></li>
+                        <li class="main-nav-item">
+                            <a href="#main">
+                                <span class="monuments-icon"></span>
+                                Zabytki
+                            </a>
+                        </li>
+                        <li class="main-nav-item">
+                            <a href="#team">
+                                <span class="about-us-icon"></span>
+                                O nas</a>
+                        </li>
+                        <li class="main-nav-item">
+                            <a href="#footer">
+                                <span class="contact-icon"></span>
+                                Kontakt</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -68,8 +81,8 @@
             <div class="row row-bottom">
                 <div class="col-md-6">
                     <div class="monument">
-                        <div class="monument-picture">
-                            <img src="images/main_image/1.jpg" alt="Długi Targ">
+                        <div class="monument-picture ">
+                            <img class="animation-element" src="images/main_image/1.jpg" alt="Długi Targ">
                         </div>
                         <div class="monument-content">
                             <div class="row">
@@ -91,7 +104,7 @@
                 <div class="col-md-6">
                     <div class="monument">
                         <div class="monument-picture">
-                            <img src="images/main_image/2.jpg" alt="Żuraw">
+                            <img class="animation-element" src="images/main_image/2.jpg" alt="Żuraw">
                         </div>
                         <div class="monument-content">
                             <div class="row">
@@ -115,7 +128,7 @@
                 <div class="col-md-6">
                     <div class="monument">
                         <div class="monument-picture">
-                            <img src="images/main_image/3.jpg" alt="Mariacka">
+                            <img class="animation-element" src="images/main_image/3.jpg" alt="Mariacka">
                         </div>
                         <div class="monument-content">
                             <div class="row">
@@ -137,7 +150,7 @@
                 <div class="col-md-6">
                     <div class="monument">
                         <div class="monument-picture">
-                            <img src="images/main_image/4.jpg" alt="Ratusz">
+                            <img class="animation-element" src="images/main_image/4.jpg" alt="Ratusz">
                         </div>
                         <div class="monument-content">
                             <div class="row">
@@ -174,7 +187,7 @@
 
             <div class="row">
                 <div class="about-box col-md-4">
-                    <img src="images/about/lukasz.jpg" class="about-box-image" alt="Łukasz"/>
+                    <img src="images/about/lukasz.jpg" class="about-box-image animation-element" alt="Łukasz"/>
                     <h3>Łukasz</h3>
                     <a href="https://pl.linkedin.com/in/łukasz-kowalewski-298187100" target="_blank">
                         <span class="linkedin-icon"></span>
@@ -186,7 +199,7 @@
                 </div>
 
                 <div class="about-box col-md-4 ">
-                    <img src="images/about/magda.jpg" class="about-box-image " alt="Magda"/>
+                    <img src="images/about/magda.jpg" class="about-box-image animation-element" alt="Magda"/>
                     <h3>Magda</h3>
                     <a href="https://pl.linkedin.com/in/magdalena-olszewska-a463ab96" target="_blank">
                         <span class="linkedin-icon"></span>
@@ -200,7 +213,7 @@
                 </div>
 
                 <div class="about-box col-md-4">
-                    <img src="images/about/michal.jpg" class="about-box-image" alt="Michał"/>
+                    <img src="images/about/michal.jpg" class="about-box-image animation-element" alt="Michał"/>
                     <h3>Michał</h3>
                     <a href="" target="_blank">
                         <span class="linkedin-icon"></span>
@@ -221,9 +234,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h3>
-                        <span class="fa fa-wpforms"> </span> Fotografie
-                    </h3>
+                    <h4>Fotografie</h4>
                     <ul>
                         <li>
                             <h4>Adrianna Wolszon
@@ -237,40 +248,48 @@
                 </div>
 
                 <div class="col-md-6">
-                    <h3>
-                        <span class="fa fa-envelope-o"></span> Spamletter
-                    </h3>
+                    <h4>Gdańsk-letter</h4>
                     <form action="" class="contact-form" method="get"> <!-- formularz z bajearmi-->
-                        <p>Daj znać jeśli chcesz, żebyśmy wysłali Ci trochę spamu.</p>
+                        <p class="form-text">Bądź na bieżąco z najciekawszymi wydarzeniami w Gdańsku - zapisz się!</p>
                         <div class="form-group form-inline" >
-                            <div class="input-group form-field">
-                                <span class="input-group-addon" id="user-name">Imię</span>
-                                <input type="text" class="form-control locked" placeholder="Steve" aria-describedby="user-name" required disabled>
-                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-group form-field full-width">
+                                        <span class="input-group-addon" id="user-name">Imię</span>
+                                        <input type="text" class="form-control locked" placeholder="Steve" aria-describedby="user-name" required disabled>
+                                    </div>
+                                </div>
 
-                            <div class="input-group form-field" >
-                                <span class="input-group-addon" id="user-email">Email</span>
-                                <input type="email" class="form-control locked" placeholder="email@domain.com" aria-describedby="user-email" required disabled>
+                                <div class="col-md-6">
+                                    <div class="input-group form-field full-width" >
+                                        <span class="input-group-addon" id="user-email">Email</span>
+                                        <input type="email" class="form-control locked" placeholder="email@domain.com" aria-describedby="user-email" required disabled>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="checkbox">
-                            <label><input type="checkbox" required class="antibot" /><em>Uwielbiam dostawać śmieci na maila</em></label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" required class="antibot" /><em class="form-text">Nie jestem robotem :)</em></label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 pull-right">
+                                <button type="submit" class="btn btn-default">Wyślij</button>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-default"><i class="fa fa-envelope-o" aria-hidden="true"></i> wyślij</button>
                     </form>
                 </div> <!-- W tym miejscu kończy się kolumna formularza z bajerami-->
             </div> <!-- ...a tu kończy sie cały wiersz/row w którym znajdują się obydwa formularze -->
 
-            <hr>
-            <!--<h3>stopka</h3>-->
-            <!--<i class="fa fa-copyright" aria-hidden="true">&copy; Copyright 2016</i>-->
-            <!--<p>Footer text placeholder.</p>-->
+            <hr class="separator-first">
+            <hr class="separator-second">
 
             <p class="social">
-                <a href="http://facebook.com" target="_blank" class="social-icons-link">
+                <a href="https://www.facebook.com/infoshareacademy/" target="_blank" class="social-icons-link">
                     <span class="social-icon facebook-icon"></span>
                 </a>
-                <a href="http://twitter.com" target="_blank" class="social-icons-link">
+                <a href="https://twitter.com/infosharepl" target="_blank" class="social-icons-link">
                     <span class="social-icon twitter-icon"></span>
                 </a>
                 <a href="http://plus.google.com" target="_blank" class="social-icons-link">
