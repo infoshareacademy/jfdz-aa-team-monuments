@@ -1,25 +1,28 @@
-$( document ).ready(function() {
-    console.log( "Let's play some game!" );
+var elementsProperties = {
 
-    var gameCanvas;
-    var gameCanvasContext;
+    frames: 8,
 
-    gameCanvas = document.getElementById('game-canvas');
-    gameCanvasContext = gameCanvas.getContext('2d');
-
-    var frameRate = 8;
-    var score = 0;
-
-    var bottleSpeed = 1;
-    var bottles = [];
-
-    var hero = {
+    bottles: {
+        number: [],
+        speed: 1
+    },
+    hero: {
         positionX: 400,
         positionY:760,
         health: 999,
         speed: 0,
         animationSpeed : 17
-    };
+    },
+    player: {
+        score: 0,
+        health: 100
+    }
+}
+
+
+$( document ).ready(function() {
+    
+    console.log( "Ekran powitalny - Let's play some game!" );
 
     var interval;
 
@@ -27,30 +30,38 @@ $( document ).ready(function() {
     drawImageElement('images/beers.png',340,130, 150, 150);
     drawText('AA Team', '45px Impact, Charcoal, sans-serif', '#E9AD0E', 'center' , 340, 340 );
 
+    $('#restart-btn').click(startGame);
+    $('#start-btn').click(startGame);
 
-    var startGame = function() {
+    return interval;
+});
 
-        bottles = [];
+
+
+     function startGame() {
+
+       bottlesNumber = elementsProperties.bottles.number;
+       bottlesSpeed = elementsProperties.bottles.speed;
+
+       hero = elementsProperties.hero;
+       player = elementsProperties.player;
 
         for (var i = 0; i<10; i++) {
-            bottles.push({
+            bottlesNumber.push({
                 positionX: Math.floor(Math.random()*780),
                 positionY: i * -100
             });
         }
             console.log('Real game starts here!');
 
-        if (interval) {
-            clearInterval(interval);
-        }
+        setInterval(function(){
 
-            interval = setInterval(function(){
                 gameCanvasContext.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
                 paintStage();
                 paintBottles();
                 paintHero();
                 moveHero();
-            },frameRate);
+            },elementsProperties.frames);
 
             gameCanvas.addEventListener('mousemove' , function(evt){
                 var mousePosition = calculateMousePosition(evt);
@@ -70,9 +81,9 @@ $( document ).ready(function() {
     //Bootles draw and movement functions
     function paintBottles() {
 
-        for (var i = 0; i < bottles.length; i++) {
-            var positionX = bottles[i].positionX;
-            var positionY = bottles[i].positionY;
+        for (var i = 0; i < bottlesNumber.length; i++) {
+            var positionX = bottlesNumber[i].positionX;
+            var positionY = bottlesNumber[i].positionY;
             var heroRange = positionX > hero.positionX - 45 && positionX < hero.positionX + 45;
 
             if (positionY < gameCanvas.height-45) {
@@ -80,22 +91,22 @@ $( document ).ready(function() {
                 moveBottle(i);
 
                 if (positionY == gameCanvas.height -46 && heroRange) {
-                    score +=10;
-                    $('#score').text(score);
-                    console.log("score: " + score);
+                    player.score +=10;
+                    $('#score').text(player.score);
+                    console.log("score: " + player.score);
                 }
 
                 else if (positionY == gameCanvas.height-46 && !heroRange) {
-                    hero.health -= 10;
-                    $('#health').text(hero.health);
-                    console.log("Hero health: " + hero.health);
+                    player.health -= 10;
+                    $('#health').text(player.health);
+                    console.log("Hero health: " + player.health);
                 }
             }
         }
     }
 
     function moveBottle(elem) {
-        bottles[elem].positionY += bottleSpeed;
+        bottlesNumber[elem].positionY += bottlesSpeed;
     }
 
     function paintHero(){
@@ -112,82 +123,9 @@ $( document ).ready(function() {
         moveHeroRight();
     }
 
-    //Hero movement functions
-    function moveHeroLeft() {
-        if (hero.positionX > 0){
-            hero.positionX -= hero.speed;
-        }
-    }
-    function moveHeroRight() {
-        if (hero.positionX < gameCanvas.width){
-            hero.positionX += hero.speed;
-        }
-    }
 
-    //Keyboard controls function
-    var moveHeroInterval;
 
-    function keydownMove(key) {
-        if( !moveHeroInterval ) {
-            hero.speed = 10;
-            if (key.keyCode == 65) {
-                moveHeroInterval = setInterval(moveHeroLeft, hero.animationSpeed);
-            }
 
-            if (key.keyCode == 68) {
-                moveHeroInterval = setInterval(moveHeroRight, hero.animationSpeed);
-            }
-        }
-    }
 
-    function keyupMove(){
-        clearInterval(moveHeroInterval);
-        moveHeroInterval = null;
-        hero.speed = 0;
-    }
 
-    //Mouse control function
-    function calculateMousePosition(evt) {
-        var rect = gameCanvas.getBoundingClientRect();
-        var root = document.documentElement;
-        var mouseX = evt.clientX - rect.left - root.scrollLeft;
-        var mouseY = evt.clientY - rect.top - root.scrollTop;
-        return {
-            x:mouseX,
-            y:mouseY
-        };
-    }
 
-    // Drawing functions
-    function drawRect(left, top, width, height, drawColor) {
-        gameCanvasContext.fillStyle = drawColor;
-        gameCanvasContext.fillRect(left, top, width, height)
-    }
-
-    function drawCircle(left, top, radius, drawColor) {
-        gameCanvasContext.fillStyle = drawColor;
-        gameCanvasContext.beginPath();
-        gameCanvasContext.arc(left, top, radius, 0, Math.PI*2, true);
-        gameCanvasContext.fill();
-    }
-
-    function drawText(text, font, color, align, left, top ) {
-        gameCanvasContext.font = font;
-        gameCanvasContext.fillStyle = color;
-        gameCanvas.textAlign = align;
-        gameCanvasContext.fillText(text, left, top);
-    }
-
-    function drawImageElement(imagePath, left, top, scaleX, scaleY) {
-        var img = new Image();
-
-        img.onload = function() {
-            gameCanvasContext.drawImage(img, left, top, scaleX, scaleY);
-        };
-        img.src = imagePath;
-    }
-
-    $('#restart-btn').click(startGame);
-    $('#start-btn').click(startGame);
-
-});
