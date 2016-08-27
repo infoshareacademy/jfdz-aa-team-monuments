@@ -1,7 +1,5 @@
 var elementsProperties = {
-
     frames: 8,
-
     bottles: {
         number: [],
         speed: 1
@@ -19,7 +17,6 @@ var elementsProperties = {
     }
 }
 
-
 $( document ).ready(function() {
     
     console.log( "Ekran powitalny - Let's play some game!" );
@@ -35,8 +32,6 @@ $( document ).ready(function() {
 
     return interval;
 });
-
-
 
      function startGame() {
 
@@ -122,10 +117,3 @@ $( document ).ready(function() {
         moveHeroLeft();
         moveHeroRight();
     }
-
-
-
-
-
-
-
