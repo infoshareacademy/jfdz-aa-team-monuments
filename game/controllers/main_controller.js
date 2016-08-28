@@ -17,7 +17,7 @@ var elementsProperties = {
         score: 0,
         health: 100
     }
-}
+};
 
 $( document ).ready(function() {
     
