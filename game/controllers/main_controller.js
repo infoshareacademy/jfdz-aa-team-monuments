@@ -67,10 +67,12 @@ function endGame(){
 };
 
 
-
 function startButton(){
-    $('#score').text(0);
-    $('#health').text(100);
+    player.score = 0;
+    player.health = 100;
+
+    $('#score').text(player.score);
+    $('#health').text(player.health);
     startGame();
 }
 
