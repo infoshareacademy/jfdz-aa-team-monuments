@@ -1,5 +1,7 @@
 var elementsProperties = {
+
     frames: 8,
+
     bottles: {
         number: [],
         speed: 1
@@ -21,51 +23,54 @@ $( document ).ready(function() {
     
     console.log( "Ekran powitalny - Let's play some game!" );
 
-    var interval;
-
     drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#D13208');
     drawImageElement('images/beers.png',340,130, 150, 150);
-    drawText('AA Team', '45px Impact, Charcoal, sans-serif', '#E9AD0E', 'center' , 340, 340 );
+    drawText('AA Team', '45px Impact, Charcoal, sans-serif', '#E9AD0E', 'center' , 325, 340 );
 
     $('#restart-btn').click(startGame);
     $('#start-btn').click(startGame);
 
-    return interval;
 });
 
-     function startGame() {
+function startGame() {
 
-       bottlesNumber = elementsProperties.bottles.number;
-       bottlesSpeed = elementsProperties.bottles.speed;
+    bottlesNumber = elementsProperties.bottles.number;
+    bottlesSpeed = elementsProperties.bottles.speed;
 
-       hero = elementsProperties.hero;
-       player = elementsProperties.player;
+    hero = elementsProperties.hero;
+    player = elementsProperties.player;
 
-        for (var i = 0; i<10; i++) {
-            bottlesNumber.push({
-                positionX: Math.floor(Math.random()*780),
-                positionY: i * -100
-            });
-        }
-            console.log('Real game starts here!');
+    for (var i = 0; i<10; i++) {
+        bottlesNumber.push({
+            positionX: Math.floor(Math.random()*780),
+            positionY: i * -100
+        });
+    }
+    console.log('Real game starts here!');
 
-        setInterval(function(){
+    setInterval(function(){
+        gameCanvasContext.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
+        paintStage();
+        paintBottles();
+        paintHero();
+        moveHero();
+    },elementsProperties.frames);
 
-                gameCanvasContext.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
-                paintStage();
-                paintBottles();
-                paintHero();
-                moveHero();
-            },elementsProperties.frames);
+    gameCanvas.addEventListener('mousemove' , function(evt){
+        var mousePosition = calculateMousePosition(evt);
+        hero.positionX = mousePosition.x;
+    });
 
-            gameCanvas.addEventListener('mousemove' , function(evt){
-                var mousePosition = calculateMousePosition(evt);
-                hero.positionX = mousePosition.x;
-            });
-
-            window.addEventListener('keydown',keydownMove,false);
-            window.addEventListener('keyup',keyupMove,false);
+    window.addEventListener('keydown',keydownMove,false);
+    window.addEventListener('keyup',keyupMove,false);
     };
+
+
+
+function endGame(){
+    console.log('Ekran końcowy - Game Over')
+};
+
 
     function paintStage(){
             //Background
@@ -73,31 +78,35 @@ $( document ).ready(function() {
             drawRect(0, gameCanvas.height-45, gameCanvas.width, 45, '#4AA840');
     }
 
+
     //Bootles draw and movement functions
     function paintBottles() {
 
-        for (var i = 0; i < bottlesNumber.length; i++) {
-            var positionX = bottlesNumber[i].positionX;
-            var positionY = bottlesNumber[i].positionY;
-            var heroRange = positionX > hero.positionX - 45 && positionX < hero.positionX + 45;
+        bottlesNumber.forEach(myFunction);
 
-            if (positionY < gameCanvas.height-45) {
-                drawRect(positionX, positionY, 20, 35, 'blue');
-                moveBottle(i);
+        function myFunction(item,index) {
+            var bottlePositionX = bottlesNumber[index].positionX;
+            var bottlePositionY = bottlesNumber[index].positionY;
+            var heroRange = bottlePositionX > hero.positionX - 45 && bottlePositionX < hero.positionX + 45;
 
-                if (positionY == gameCanvas.height -46 && heroRange) {
+            if (bottlePositionY < gameCanvas.height-45) {
+                drawRect(bottlePositionX, bottlePositionY, 20, 35, 'blue');
+                moveBottle(index);
+
+                if (bottlePositionY >= gameCanvas.height -46 && heroRange) {
                     player.score +=10;
                     $('#score').text(player.score);
                     console.log("score: " + player.score);
                 }
 
-                else if (positionY == gameCanvas.height-46 && !heroRange) {
+                else if (bottlePositionY >= gameCanvas.height-46 && !heroRange) {
                     player.health -= 10;
                     $('#health').text(player.health);
                     console.log("Hero health: " + player.health);
                 }
             }
         }
+
     }
 
     function moveBottle(elem) {

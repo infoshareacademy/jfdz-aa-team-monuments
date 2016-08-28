@@ -3,8 +3,6 @@
 var gameCanvas = document.getElementById('game-canvas');
 var gameCanvasContext = gameCanvas.getContext('2d');
 
-
-
 //Hero movement functions
 function moveHeroLeft() {
     hero = elementsProperties.hero;
@@ -51,7 +49,6 @@ function calculateMousePosition(evt) {
         y:mouseY
     };
 }
-
 
 // Drawing functions
 function drawRect(placementX, placementY, width, height, drawColor) {
