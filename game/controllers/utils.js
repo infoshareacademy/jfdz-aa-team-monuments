@@ -72,7 +72,7 @@ function drawText(text, font, color, align, placementX, placementY ) {
 
 function drawImageElement(imagePath, placementX, placementY, scaleX, scaleY ) {
     var img = new Image();
-
+    
     img.onload = function() {
         gameCanvasContext.drawImage(img, placementX, placementY, scaleX, scaleY);
     };

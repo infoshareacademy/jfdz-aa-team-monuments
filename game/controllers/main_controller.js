@@ -1,14 +1,12 @@
 var elementsProperties = {
-
     frames: 8,
-
     bottles: {
         number: [],
         speed: 1
     },
     hero: {
         positionX: 400,
-        positionY:760,
+        positionY:750,
         health: 999,
         speed: 0,
         animationSpeed : 17
@@ -19,8 +17,16 @@ var elementsProperties = {
     }
 };
 
+var bottlesNumber = elementsProperties.bottles.number;
+var bottlesSpeed = elementsProperties.bottles.speed;
+
+var hero = elementsProperties.hero;
+var player = elementsProperties.player;
+var gameInterval;
+
+
 $( document ).ready(function() {
-    
+
     console.log( "Ekran powitalny - Let's play some game!" );
 
     drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#D13208');
@@ -34,21 +40,13 @@ $( document ).ready(function() {
 
 function startGame() {
 
-    bottlesNumber = elementsProperties.bottles.number;
-    bottlesSpeed = elementsProperties.bottles.speed;
+    console.log('Ekran Rozgrywki - Real game starts here!');
 
-    hero = elementsProperties.hero;
-    player = elementsProperties.player;
+    addBottles(10);
 
-    for (var i = 0; i<10; i++) {
-        bottlesNumber.push({
-            positionX: Math.floor(Math.random()*780),
-            positionY: i * -100
-        });
-    }
-    console.log('Real game starts here!');
+    clearInterval(gameInterval);
 
-    setInterval(function(){
+    gameInterval = setInterval(function(){
         gameCanvasContext.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
         paintStage();
         paintBottles();
@@ -66,63 +64,75 @@ function startGame() {
     };
 
 
-
 function endGame(){
     console.log('Ekran końcowy - Game Over')
 };
 
 
-    function paintStage(){
-            //Background
-            drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#90C3D4');
-            drawRect(0, gameCanvas.height-45, gameCanvas.width, 45, '#4AA840');
+function paintStage(){
+    //Background
+    drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#90C3D4');
+    drawRect(0, gameCanvas.height-45, gameCanvas.width, 45, '#4AA840');
+}
+
+
+//Bootles draw and movement functions
+function addBottles(number) {
+    bottlesNumber =[];
+    for (var i = 0; i<number; i++) {
+        bottlesNumber.push({
+            positionX: Math.floor(Math.random()*780),
+            positionY: i * -100
+        });
     }
+}
 
+function paintBottles() {
 
-    //Bootles draw and movement functions
-    function paintBottles() {
+    bottlesNumber.forEach(myFunction);
 
-        bottlesNumber.forEach(myFunction);
-
-        function myFunction(item,index) {
-            var bottlePositionX = bottlesNumber[index].positionX;
-            var bottlePositionY = bottlesNumber[index].positionY;
-            var heroRange = bottlePositionX > hero.positionX - 45 && bottlePositionX < hero.positionX + 45;
-
-            if (bottlePositionY < gameCanvas.height-45) {
-                drawRect(bottlePositionX, bottlePositionY, 20, 35, 'blue');
-                moveBottle(index);
-
-                if (bottlePositionY >= gameCanvas.height -46 && heroRange) {
-                    player.score +=10;
-                    $('#score').text(player.score);
-                    console.log("score: " + player.score);
-                }
-
-                else if (bottlePositionY >= gameCanvas.height-46 && !heroRange) {
-                    player.health -= 10;
-                    $('#health').text(player.health);
-                    console.log("Hero health: " + player.health);
-                }
-            }
+    function myFunction(item,index) {
+        if (item === undefined) {
+            return;
         }
 
-    }
+        var bottlePositionX = bottlesNumber[index].positionX;
+        var bottlePositionY = bottlesNumber[index].positionY;
+        var heroRange = bottlePositionX > hero.positionX - 50 && bottlePositionX < hero.positionX + 50;
+        
+        drawRect(bottlePositionX, bottlePositionY, 20, 35, 'blue');
+        moveBottle(index);
 
-    function moveBottle(elem) {
-        bottlesNumber[elem].positionY += bottlesSpeed;
-    }
+        if (bottlePositionY >= gameCanvas.height -50 && heroRange) {
+            player.score +=10;
+            $('#score').text(player.score);
+            console.log("score: " + player.score);
+            bottlesNumber[index] = undefined;
+        }
 
-    function paintHero(){
-        //Elmo
-        drawCircle(hero.positionX, gameCanvas.height-50, 40, 'brown');
-        drawCircle(hero.positionX-15, gameCanvas.height-45, 13, 'white');
-        drawCircle(hero.positionX-15, gameCanvas.height-45, 5, 'black');
-        drawCircle(hero.positionX+15, gameCanvas.height-45, 13, 'white');
-        drawCircle(hero.positionX+15, gameCanvas.height-45, 5, 'black');
+        else if (bottlePositionY >= gameCanvas.height-50 && !heroRange) {
+            player.health -= 10;
+            $('#health').text(player.health);
+            console.log("Hero health: " + player.health);
+            bottlesNumber[index] = undefined;
+        }
     }
+}
 
-    function moveHero() {
-        moveHeroLeft();
-        moveHeroRight();
-    }
+function moveBottle(elem) {
+    bottlesNumber[elem].positionY += bottlesSpeed;
+}
+
+function paintHero(){
+    //Elmo
+    drawCircle(hero.positionX, gameCanvas.height-60, 45, 'brown');
+    drawCircle(hero.positionX-15, gameCanvas.height-55, 13, 'white');
+    drawCircle(hero.positionX-15, gameCanvas.height-55, 5, 'black');
+    drawCircle(hero.positionX+15, gameCanvas.height-55, 13, 'white');
+    drawCircle(hero.positionX+15, gameCanvas.height-55, 5, 'black');
+}
+
+function moveHero() {
+    moveHeroLeft();
+    moveHeroRight();
+}
