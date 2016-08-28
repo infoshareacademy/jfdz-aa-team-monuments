@@ -28,14 +28,18 @@ var gameInterval;
 $( document ).ready(function() {
     console.log( "Ekran powitalny - Let's play some game!" );
 
-    drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#D13208');
-    drawImageElement('images/beers.png',340,130, 150, 150);
-    drawText('AA Team', '45px Impact, Charcoal, sans-serif', '#E9AD0E', 'center' , 325, 340 );
-
-    $('#restart-btn').click(startGame);
-    $('#start-btn').click(startButton);
+    openingScreen();
 
 });
+    function openingScreen() {
+        clearInterval(gameInterval);
+        drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#D13208');
+        drawImageElement('images/beers.png', 340, 130, 150, 150);
+        drawText('AA Team', '45px Impact, Charcoal, sans-serif', '#E9AD0E', 'center', 325, 340);
+
+        $('#restart-btn').click(restartGameButton);
+        $('#start-btn').click(startGameButton);
+    }
 
 function startGame() {
     console.log('Ekran Rozgrywki - Real game starts here!');
@@ -59,25 +63,30 @@ function startGame() {
 
     window.addEventListener('keydown',keydownMove,false);
     window.addEventListener('keyup',keyupMove,false);
-    };
+    }
 
 
 function endGame(){
     console.log('Ekran końcowy - Game Over')
-};
+}
 
 
-function startButton(){
+function startGameButton(){
+    clearPlayerParameters();
+    startGame();
+}
+
+function restartGameButton(){
+    clearPlayerParameters();
+    openingScreen();
+}
+
+function clearPlayerParameters() {
     player.score = 0;
     player.health = 100;
 
     $('#score').text(player.score);
     $('#health').text(player.health);
-    startGame();
-}
-
-function restartButton(){
-    startGame()
 }
 
 function paintStage(){
