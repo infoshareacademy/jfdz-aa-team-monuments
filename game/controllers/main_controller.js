@@ -7,7 +7,7 @@ var elementsProperties = {
     hero: {
         positionX: 400,
         positionY:750,
-        health: 999,
+        health: 100,
         speed: 0,
         animationSpeed : 17
     },
@@ -26,7 +26,6 @@ var gameInterval;
 
 
 $( document ).ready(function() {
-
     console.log( "Ekran powitalny - Let's play some game!" );
 
     drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#D13208');
@@ -34,12 +33,11 @@ $( document ).ready(function() {
     drawText('AA Team', '45px Impact, Charcoal, sans-serif', '#E9AD0E', 'center' , 325, 340 );
 
     $('#restart-btn').click(startGame);
-    $('#start-btn').click(startGame);
+    $('#start-btn').click(startButton);
 
 });
 
 function startGame() {
-
     console.log('Ekran Rozgrywki - Real game starts here!');
 
     addBottles(10);
@@ -69,12 +67,22 @@ function endGame(){
 };
 
 
+
+function startButton(){
+    $('#score').text(0);
+    $('#health').text(100);
+    startGame();
+}
+
+function restartButton(){
+    startGame()
+}
+
 function paintStage(){
     //Background
     drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#90C3D4');
     drawRect(0, gameCanvas.height-45, gameCanvas.width, 45, '#4AA840');
 }
-
 
 //Bootles draw and movement functions
 function addBottles(number) {
@@ -99,7 +107,7 @@ function paintBottles() {
         var bottlePositionX = bottlesNumber[index].positionX;
         var bottlePositionY = bottlesNumber[index].positionY;
         var heroRange = bottlePositionX > hero.positionX - 50 && bottlePositionX < hero.positionX + 50;
-        
+
         drawRect(bottlePositionX, bottlePositionY, 20, 35, 'blue');
         moveBottle(index);
 
