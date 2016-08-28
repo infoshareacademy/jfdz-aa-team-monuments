@@ -17,10 +17,12 @@ body {
 	margin-top: 5px;
 	color: #ceb078;
 	text-shadow: rgba(0,0,0,0.2) 0 0 7px;
+	transition: all 0.3s ease-in-out;
 }
 
 .navbar-nav li.main-nav-item > a:hover, .navbar-nav li.main-nav-item > a:focus {
-	color: #d9bb89;
+	color: #fff;
+	transform: scale(1.1);
 }
 
 .navbar-default .navbar-nav > .active > a {
@@ -187,8 +189,6 @@ main {
 .monument-picture img{
 	width: 100%;
 	height: auto;
-	opacity: 0;
-	transition: All 4s ease;
 }
 
 .monument-content {
@@ -450,4 +450,14 @@ footer h4 a:hover {
 }
 #cookies-alert {
     border-color: #c5c2c2;
+}
+
+.animation-element {
+	opacity: 0;
+	transition: All 3s ease;
+}
+
+.animation-element-active {
+	opacity: 1;
+	transition: All 3s ease;
 }

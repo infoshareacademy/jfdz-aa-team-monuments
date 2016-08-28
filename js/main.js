@@ -42,10 +42,11 @@ function initScrollBasedAnimations() {
             var element_height = $element.outerHeight();
             var element_top_position = $element.offset().top;
             var element_bottom_position = (element_top_position + element_height);
+            $element.removeClass('animation-element-active');
             
             if ((element_bottom_position >= window_top_position) &&
                 (element_top_position <= window_bottom_position)) {
-                $element.css({'opacity':'1'});
+                $element.addClass('animation-element-active');
             }
         });
     }
