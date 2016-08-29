@@ -31,15 +31,17 @@ $( document ).ready(function() {
     openingScreen();
 
 });
-    function openingScreen() {
-        clearInterval(gameInterval);
-        drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#D13208');
-        drawImageElement('images/beers.png', 340, 130, 150, 150);
-        drawText('AA Team', '45px Impact, Charcoal, sans-serif', '#E9AD0E', 'center', 325, 340);
+function openingScreen() {
+    clearInterval(gameInterval);
+    drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#D13208');
+    drawImageElement('images/beers.png', 340, 130, 125, 125);
+    drawText('AA Team', '40px Impact, Charcoal, sans-serif', '#E9AD0E', 'right', 335, (gameCanvas.height/2));
 
-        $('#restart-btn').click(restartGameButton);
-        $('#start-btn').click(startGameButton);
+    $('#restart-btn').click(restartGameButton);
+    $('#start-btn').click(startGameButton);
+    $('#end-btn').click(endGameButton);
     }
+
 
 function startGame() {
     console.log('Ekran Rozgrywki - Real game starts here!');
@@ -68,26 +70,12 @@ function startGame() {
 
 function endGame(){
     console.log('Ekran końcowy - Game Over')
+
+    clearInterval(gameInterval);
+    drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#D13208');
+    drawText('Game Over', '40px Impact, Charcoal, sans-serif', '#E9AD0E', 'center', 320, gameCanvas.height/2);
 }
 
-
-function startGameButton(){
-    clearPlayerParameters();
-    startGame();
-}
-
-function restartGameButton(){
-    clearPlayerParameters();
-    openingScreen();
-}
-
-function clearPlayerParameters() {
-    player.score = 0;
-    player.health = 100;
-
-    $('#score').text(player.score);
-    $('#health').text(player.health);
-}
 
 function paintStage(){
     //Background
@@ -154,4 +142,26 @@ function paintHero(){
 function moveHero() {
     moveHeroLeft();
     moveHeroRight();
+}
+
+function startGameButton(){
+    clearPlayerParameters();
+    startGame();
+}
+
+function restartGameButton(){
+    clearPlayerParameters();
+    openingScreen();
+}
+
+function endGameButton(){
+    endGame();
+}
+
+function clearPlayerParameters() {
+    player.score = 0;
+    player.health = 100;
+
+    $('#score').text(player.score);
+    $('#health').text(player.health);
 }
