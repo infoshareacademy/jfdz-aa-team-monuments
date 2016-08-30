@@ -78,3 +78,7 @@ function drawImageElement(imagePath, placementX, placementY, scaleX, scaleY ) {
     };
     img.src = imagePath;
 }
+
+function isUndefined(x) {
+    return x === undefined;
+}
