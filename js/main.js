@@ -95,7 +95,7 @@ $(document).ready(function () {
     initScrollBasedAnimations();
 
     $('.contact-form').submit(function(e) {
-        alert('aaa');
+        alert('no i poszedł spamik! ;) ');
         e.preventDefault();
 
     });
