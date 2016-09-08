@@ -94,4 +94,10 @@ $(document).ready(function () {
     initFormValidation();
     initScrollBasedAnimations();
 
+    $('.contact-form').submit(function(e) {
+        alert('aaa');
+        e.preventDefault();
+
+    });
+
 }); // Document Last Line  
