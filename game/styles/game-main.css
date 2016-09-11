@@ -1,4 +1,18 @@
 body {
     background-color: cadetblue;
     font-family: Arial, sans-serif;
+    margin: auto;
+    max-width: 800px;
+}
+
+canvas {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    z-index: -1;
+}
+
+.info {
+    color: #000;
+    width: 100px;
 }

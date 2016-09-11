@@ -1,13 +1,15 @@
 var elementsProperties = {
-    frames: 8,
+    frames: 12,
     bottles: {
         list: [],
-        speed: 1
+        speed: 1,
+        amount: 5
     },
     hero: {
         positionX: 400,
         positionY:750,
         health: 50,
+        healthDefault: 50,
         speed: 0,
         animationSpeed : 17
     },
@@ -19,6 +21,7 @@ var elementsProperties = {
 
 var bottlesList = elementsProperties.bottles.list;
 var bottlesSpeed = elementsProperties.bottles.speed;
+var bottlesAmount = elementsProperties.bottles.amount;
 
 var hero = elementsProperties.hero;
 var player = elementsProperties.player;
@@ -29,12 +32,12 @@ $( document ).ready(function() {
     openingScreen();
 });
 
+
 // --------- TITLE -----------
 function openingScreen() {
+    console.log('Start-Screen');
     clearInterval(gameInterval);
     drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#D13208');
-    drawImageElement('images/beers.png', 340, 130, 125, 125);
-    drawText('AA Team', '40px Impact, Charcoal, sans-serif', '#E9AD0E', 'right', 335, (gameCanvas.height/2));
 
     $('#restart-btn').click(restartGameButton);
     $('#start-btn').click(startGameButton);
@@ -45,16 +48,10 @@ function openingScreen() {
 function startGame() {
     console.log('Ekran Rozgrywki - Real game starts here!');
 
-    addBottles(5);
+    addBottles(bottlesAmount);
     clearInterval(gameInterval);
 
-    gameInterval = setInterval(function(){
-        gameCanvasContext.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
-        paintStage();
-        paintBottles();
-        paintHero();
-        moveHero();
-    },elementsProperties.frames);
+    addInterval();
 
     gameCanvas.addEventListener('mousemove' , function(evt){
         var mousePosition = calculateMousePosition(evt);
@@ -65,17 +62,16 @@ function startGame() {
     window.addEventListener('keyup',keyupMove,false);
 }
 
+
 // --------- GAME OVER -----------
 function endGame(){
-    console.log('Ekran końcowy - Game Over');
-
-    clearInterval(gameInterval);
-
-    drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#D13208');
-    drawText('Game Over', '40px Impact, Charcoal, sans-serif', '#E9AD0E', 'center', 320, gameCanvas.height/2);
+        console.log('Ekran końcowy - Game Over');
+        clearInterval(gameInterval);
+        drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#D13208');
 }
 
-// --------- TITLE -----------
+
+// -------------------
 function paintStage(){
     //Background
     drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#90C3D4');
@@ -96,6 +92,19 @@ function addBottles(number) {
         });
     }
 }
+
+function addInterval() {
+    gameInterval = setInterval(function(){
+        gameCanvasContext.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
+        paintStage();
+        paintBottles();
+        paintHero();
+        moveHero();
+    },elementsProperties.frames);
+}
+
+var maxLevels = 5,
+    level = 1;
 
 function paintBottles() {
     bottlesList.forEach(dropBottle);
@@ -127,12 +136,29 @@ function paintBottles() {
 
             if (hero.health == 0) {
                 console.log('You died');
+                console.log(1);
                 return endGameButton();
             }
         }
     }
+
     if(bottlesList.every(isUndefined)) {
-        return endGameButton()
+        clearInterval(gameInterval)
+        setTimeout(function() {
+            bottlesAmount += 5;
+            addBottles(bottlesAmount);
+            level++;
+            addInterval();
+
+            end();
+            console.log(level);
+        }, 2000);
+
+        function end() {
+            if (level === maxLevels) {
+                return endGameButton()
+            }a
+        }
     }
 }
 
@@ -176,7 +202,7 @@ function clearPlayerParameters() {
     $('#score').text(player.score);
     $('#health').text(hero.health);
 
-    hero.health = 50;
+    hero.health = hero.healthDefault;
     player.score = 0;
 }
 
@@ -187,4 +213,6 @@ function showBestScore() {
 
     console.log('Your score is: ' + player.score);
     console.log('Your best score is: ' + player.bestScore);
+
 }
+

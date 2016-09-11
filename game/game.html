@@ -3,18 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>AA_Game</title>
-
     <link href="styles/game-main.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
 <h1>MyGame</h1>
-<div><span>Score: </span><span id="score">0</span></div>
-<div><span>Health: </span><span id="health">50</span></div>
-<div><button id="restart-btn">RESET GAME</button></div>
-<div><button id="start-btn">START GAME</button></div>
-<div><button id="end-btn">END GAME</button></div>
-<canvas id="game-canvas" width="800" height="600"></canvas>
+<div class="outer">
+    <div class="info start-screen">
+        <div><span>Your Best Score: </span><span id="best-score">0</span></div>
+        <div><button id="start-btn">START GAME</button></div>
+    </div>
+
+    <div class="info game-screen ">
+        <div><span>Score: </span><span id="score">0</span></div>
+        <div><span>Health: </span><span id="health">50</span></div>
+        <div><button id="end-btn">END GAME</button></div>
+    </div>
+
+    <div class="info end-screen ">
+        <div><button id="restart-btn">RESET GAME</button></div>
+    </div>
+
+    <canvas id="game-canvas" width="800" height="600"></canvas>
+
+</div>
 
 <!-- Scripts -->
 <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
