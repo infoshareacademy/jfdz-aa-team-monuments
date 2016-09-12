@@ -19,6 +19,9 @@ var elementsProperties = {
     }
 };
 
+var maxLevels = 5;
+var level = 1;
+
 var bottlesList = elementsProperties.bottles.list;
 var bottlesSpeed = elementsProperties.bottles.speed;
 var bottlesAmount = elementsProperties.bottles.amount;
@@ -55,7 +58,6 @@ function startGame() {
 
     addBottles(bottlesAmount);
     clearInterval(gameInterval);
-
     addInterval();
 
     gameCanvas.addEventListener('mousemove' , function(evt){
@@ -67,12 +69,11 @@ function startGame() {
     window.addEventListener('keyup',keyupMove,false);
 }
 
-
 // --------- GAME OVER -----------
 function endGame(){
         console.log('Ekran końcowy - Game Over');
         clearInterval(gameInterval);
-        drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#D13208');
+        drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#4AA840');
 }
 
 function showEndScreen() {
@@ -90,7 +91,6 @@ function paintStage(){
     drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#90C3D4');
     drawRect(0, gameCanvas.height-45, gameCanvas.width, 45, '#4AA840');
 }
-
 
 // --------- Functions -----------
 
@@ -116,14 +116,15 @@ function addInterval() {
     },elementsProperties.frames);
 }
 
-var maxLevels = 5,
-    level = 1;
-
 function paintBottles() {
     bottlesList.forEach(dropBottle);
 
     function dropBottle(item,index) {
         if (item === undefined) {
+            return;
+        }
+
+        if (hero.health === 0) {
             return;
         }
 
@@ -134,7 +135,7 @@ function paintBottles() {
         drawRect(bottlePositionX, bottlePositionY, 20, 35, 'blue');
         moveBottle(index);
 
-        if (bottlePositionY >= gameCanvas.height -60 && heroRange) {
+        if (bottlePositionY >= gameCanvas.height -65 && heroRange) {
             player.score +=10;
             $('#score').text(player.score);
             console.log("score: " + player.score);
@@ -146,32 +147,30 @@ function paintBottles() {
             $('#health').text(hero.health);
             console.log("Hero health: " + hero.health);
             bottlesList[index] = undefined;
-
-            if (hero.health == 0) {
+            if (hero.health === 0) {
                 console.log('You died');
-                console.log(1);
                 return endGameButton();
             }
         }
     }
 
     if(bottlesList.every(isUndefined)) {
-        clearInterval(gameInterval)
-        setTimeout(function() {
-            bottlesAmount += 5;
-            addBottles(bottlesAmount);
-            level++;
-            addInterval();
+        if(hero.health > 0 && level < maxLevels) {
+            clearInterval(gameInterval);
+            paintStage();
+            drawText("Level", '50px Impact, Charcoal, sans-serif', "white", gameCanvas.width/2 - 37, (gameCanvas.height/2)-70 );
+            drawText(level + 1, '55px Impact, Charcoal, sans-serif', "white", gameCanvas.width/2, gameCanvas.height/2 );
 
-            end();
-            console.log(level);
-        }, 2000);
-
-        function end() {
-            if (level === maxLevels) {
-                return endGameButton()
-            }a
+            setTimeout(function() {
+                bottlesAmount += 5;
+                addBottles(bottlesAmount);
+                level++;
+                addInterval();
+                console.log(level);
+            }, 2000);
         }
+        else {
+            return endGameButton()}
     }
 }
 
@@ -194,6 +193,7 @@ function moveHero() {
 }
 
 function startGameButton(){
+    clearBottlesList();
     clearPlayerParameters();
     startGame();
     hideStartScreen();
@@ -207,6 +207,7 @@ function restartGameButton(){
 
 function endGameButton(){
     endGame();
+    hero.positionX = gameCanvas.width + 80;
     showBestScore();
     clearPlayerParameters();
     showEndScreen();
@@ -215,11 +216,16 @@ function endGameButton(){
 function clearPlayerParameters() {
     hero.positionX = 400;
 
-    $('#score').text(player.score);
-    $('#health').text(hero.health);
-
     hero.health = hero.healthDefault;
     player.score = 0;
+
+    $('#score').text(player.score);
+    $('#health').text(hero.health);
+}
+
+function clearBottlesList() {
+    bottlesList = [];
+    bottlesAmount = 5;
 }
 
 function showBestScore() {
@@ -229,6 +235,6 @@ function showBestScore() {
 
     console.log('Your score is: ' + player.score);
     console.log('Your best score is: ' + player.bestScore);
-
 }
+
 
