@@ -5,14 +5,33 @@ body {
     max-width: 800px;
 }
 
+.outer {
+    position: relative;
+}
+
 canvas {
     position: absolute;
-    top: 50px;
-    left: 100px;
+    top: 0;
+    left: 0;
     z-index: -1;
 }
 
-.info {
+.start {
     color: #000;
-    width: 100px;
+    background-color: #ddd;
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.end {
+    color: #000;
+    background-color: #ddd;
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }

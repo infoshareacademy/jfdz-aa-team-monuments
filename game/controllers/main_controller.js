@@ -45,6 +45,11 @@ function openingScreen() {
 }
 
 // --------- GAME -----------
+
+function hideStartScreen() {
+        $(".start").removeClass();
+}
+
 function startGame() {
     console.log('Ekran Rozgrywki - Real game starts here!');
 
@@ -70,6 +75,14 @@ function endGame(){
         drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#D13208');
 }
 
+function showEndScreen() {
+    $("#end").addClass("end");
+}
+
+function restartScreen() {
+    $("#end").removeClass("end");
+    $('#start').addClass('start');
+}
 
 // -------------------
 function paintStage(){
@@ -183,17 +196,20 @@ function moveHero() {
 function startGameButton(){
     clearPlayerParameters();
     startGame();
+    hideStartScreen();
 }
 
 function restartGameButton(){
     clearPlayerParameters();
     openingScreen();
+    restartScreen();
 }
 
 function endGameButton(){
     endGame();
     showBestScore();
     clearPlayerParameters();
+    showEndScreen();
 }
 
 function clearPlayerParameters() {

@@ -9,23 +9,28 @@
 <body>
 <h1>MyGame</h1>
 <div class="outer">
-    <div class="info start-screen">
-        <div><span>Your Best Score: </span><span id="best-score">0</span></div>
-        <div><button id="start-btn">START GAME</button></div>
+    <div id="start" class="start">
+        <div class="start-screen">
+            <div><span>Your Best Score: </span><span id="best-score">0</span></div>
+            <div><button id="start-btn">START GAME</button></div>
+        </div>
     </div>
 
-    <div class="info game-screen ">
-        <div><span>Score: </span><span id="score">0</span></div>
-        <div><span>Health: </span><span id="health">50</span></div>
-        <div><button id="end-btn">END GAME</button></div>
+    <div class="game">
+        <div class="game-screen ">
+            <div><span>Score: </span><span id="score">0</span></div>
+            <div><span>Health: </span><span id="health">50</span></div>
+            <div><button id="end-btn">END GAME</button></div>
+        </div>
     </div>
 
-    <div class="info end-screen ">
-        <div><button id="restart-btn">RESET GAME</button></div>
+    <div id="end">
+        <div class="end-screen ">
+            <div><button id="restart-btn">RESET GAME</button></div>
+        </div>
     </div>
 
     <canvas id="game-canvas" width="800" height="600"></canvas>
-
 </div>
 
 <!-- Scripts -->
