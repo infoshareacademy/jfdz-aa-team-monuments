@@ -63,11 +63,12 @@ function drawCircle(placementX, placementY, radius, drawColor) {
     gameCanvasContext.fill();
 }
 
-function drawText(text, font, color, align, placementX, placementY ) {
+function drawText(text, font, color, placementX, placementY ) {
     gameCanvasContext.font = font;
     gameCanvasContext.fillStyle = color;
-    gameCanvas.textAlign = align;
+    gameCanvas.textAlign = "center";
     gameCanvasContext.fillText(text, placementX, placementY);
+
 }
 
 function drawImageElement(imagePath, placementX, placementY, scaleX, scaleY ) {
