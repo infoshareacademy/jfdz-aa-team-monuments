@@ -94,4 +94,10 @@ $(document).ready(function () {
     initFormValidation();
     initScrollBasedAnimations();
 
+    $('.contact-form').submit(function(e) {
+        alert('no i poszedł spamik! ;) ');
+        e.preventDefault();
+
+    });
+
 }); // Document Last Line  
