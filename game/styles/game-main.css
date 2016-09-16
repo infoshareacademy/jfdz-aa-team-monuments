@@ -1,10 +1,15 @@
 body {
-    background-color: cadetblue;
+    background-color: #1f2236;
     font-family: Arial, sans-serif;
     margin: auto;
     max-width: 800px;
+    font-family: 'Open Sans', sans-serif;
 }
 
+h2 {
+    color: #dddddd;
+    text-align: center;
+}
 .outer {
     position: relative;
 }
@@ -16,22 +21,52 @@ canvas {
     z-index: -1;
 }
 
-.start {
+.screen-bg {
     color: #000;
-    background-color: #ddd;
+    background: url(../images/beerbackground.png);
     width: 800px;
     height: 600px;
     position: absolute;
     top: 0;
     bottom: 0;
+    text-align: center;
+    padding-top: 280px;
+    box-sizing: border-box;
 }
 
-.end {
-    color: #000;
-    background-color: #ddd;
-    width: 800px;
-    height: 600px;
-    position: absolute;
-    top: 0;
-    left: 0;
+.hidden {
+    display: none;
+}
+
+.button {
+    padding: 12px 20px;
+    display: inline-block;
+    border: 3px solid #940000;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.button-white {
+    background: transparent;
+    color: #940000;
+    border-color: #940000;
+}
+
+.button-white:hover, .button-white:focus {
+    background: rgba(252, 129, 23,0.2);
+}
+
+.game-header {
+    font-family: 'Piedra', cursive;
+    font-size: 60px;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.game-sub-header {
+    font-size: 22px;
+    padding-bottom: 20px;
+    display: block;
 }
