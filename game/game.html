@@ -4,20 +4,27 @@
     <meta charset="UTF-8">
     <title>AA_Game</title>
     <link href="styles/game-main.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Piedra" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 </head>
 
 <body>
-<h1>MyGame</h1>
+<h2>AA_Team Game Studio Presents</h2>
 <div class="outer">
-    <div id="start" class="start">
+    <div id="start" class="screen-bg">
         <div class="start-screen">
-            <div><span>Your Best Score: </span><span id="best-score">0</span></div>
-            <div><button id="start-btn">START GAME</button></div>
+            <span class="game-header">Liquer survival</span>
+            <div>
+                <span class="game-sub-header">Your Best Score:
+                    <span id="best-score">0</span>
+                </span>
+            </div>
+            <div><button id="start-btn" class="button button-white">START GAME</button></div>
         </div>
     </div>
 
-    <div class="game">
-        <div class="game-screen">
+    <div id="gamesplash" class="game">
+        <div class="game-screen ">
             <div><span>Score: </span><span id="score">0</span></div>
             <div><span>Health: </span><span id="health">50</span></div>
             <div><button id="end-btn">END GAME</button></div>
@@ -25,8 +32,12 @@
     </div>
 
     <div id="end">
-        <div class="end-screen ">
-            <div><button id="restart-btn">RESET GAME</button></div>
+        <div class="screen-bg ">
+            <span class="game-header">Game Over!</span>
+            <span class="game-sub-header">Your end score is:
+                <span id="endscore"></span>
+            </span>
+            <div><button id="restart-btn" class="button button-white">PLAY AGAIN</button></div>
         </div>
     </div>
 
