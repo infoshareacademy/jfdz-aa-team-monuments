@@ -50,10 +50,10 @@ function openingScreen() {
 // --------- GAME -----------
 
 function hideStartScreen() {
-        $('#start').addClass('hidden');
-        $('#gamesplash').removeClass('hidden');
-        $('#end').addClass('hidden');
-        $('#game-canvas').removeClass('hidden');
+    $('#start').addClass('hidden');
+    $('#gamesplash').removeClass('hidden');
+    $('#end').addClass('hidden');
+    $('#game-canvas').removeClass('hidden');
 }
 
 function startGame() {
@@ -74,10 +74,10 @@ function startGame() {
 
 // --------- GAME OVER -----------
 function endGame(){
-        console.log('Ekran końcowy - Game Over');
-        clearInterval(gameInterval);
-        drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#dddddd');
-        $('#endscore').text(player.score);
+    console.log('Ekran końcowy - Game Over');
+    clearInterval(gameInterval);
+    drawRect(0, 0, gameCanvas.width, gameCanvas.height, '#dddddd');
+    $('#endscore').text(player.score);
 }
 
 function showEndScreen() {
@@ -91,6 +91,7 @@ function restartScreen() {
     $('#start').removeClass('hidden');
     $('#gamesplash').addClass('hidden');
     $("#end").addClass('hidden');
+    $('#game-canvas').addClass('hidden');
 }
 
 // -------------------
