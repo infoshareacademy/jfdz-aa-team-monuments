@@ -237,4 +237,7 @@ function showBestScore() {
     console.log('Your best score is: ' + player.bestScore);
 }
 
-
+function displayGameScreen() {
+    $('.end-screen').hide();
+    $('.game-screen').addClass("show-screen");
+}
