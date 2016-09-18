@@ -13,31 +13,32 @@
 <div class="outer">
     <div id="start" class="screen-bg">
         <div class="start-screen">
-            <span class="game-header">Liquer survival</span>
+            <span class="game-header">Liquor survival</span>
             <div>
                 <span class="game-sub-header">Your Best Score:
                     <span id="best-score">0</span>
                 </span>
             </div>
-            <div><button id="start-btn" class="button button-white">START GAME</button></div>
+            <div><button id="start-btn" class="button button-orange">START GAME</button></div>
         </div>
     </div>
 
-    <div id="gamesplash" class="game">
-        <div class="game-screen ">
-            <div><span>Score: </span><span id="score">0</span></div>
-            <div><span>Health: </span><span id="health">50</span></div>
-            <div><button id="end-btn">END GAME</button></div>
+    <div id="gamesplash" class="game hidden">
+        <div class="game-screen">
+            <span class="game-results">Score: </span><span id="score">0</span>
+            <span class="game-results">Health: </span><span id="health">50</span>
+            <button id="end-btn" class="button button-color">QUIT GAME</button>
+            <div class="clear"></div>
         </div>
     </div>
 
-    <div id="end">
-        <div class="screen-bg ">
+    <div id="end" class="hidden">
+        <div class="screen-bg">
             <span class="game-header">Game Over!</span>
             <span class="game-sub-header">Your end score is:
                 <span id="endscore"></span>
             </span>
-            <div><button id="restart-btn" class="button button-white">PLAY AGAIN</button></div>
+            <div><button id="restart-btn" class="button button-orange">PLAY AGAIN</button></div>
         </div>
     </div>
 

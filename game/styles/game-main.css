@@ -38,6 +38,14 @@ canvas {
     display: none;
 }
 
+.game-screen {
+    height: 45px;
+    background: #ddd;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:    0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+    box-shadow:         0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
 .button {
     padding: 12px 20px;
     display: inline-block;
@@ -48,14 +56,27 @@ canvas {
     transition: all 0.2s ease-in-out;
 }
 
-.button-white {
+.button-orange {
     background: transparent;
     color: #940000;
     border-color: #940000;
 }
 
-.button-white:hover, .button-white:focus {
+.button-orange:hover, .button-orange:focus {
     background: rgba(252, 129, 23,0.2);
+}
+
+.button-color {
+    padding: 5px 10px;
+    border: 2px solid #000000;
+    font-size: 16px;
+    background: transparent;
+    margin: 6px 6px 0 0;
+    float: right;
+}
+
+.clear {
+    clear : both;
 }
 
 .game-header {
@@ -69,4 +90,9 @@ canvas {
     font-size: 22px;
     padding-bottom: 20px;
     display: block;
+}
+
+.game-results {
+    padding: 10px 3px 0 15px;
+    display: inline-block;
 }
