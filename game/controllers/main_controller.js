@@ -167,11 +167,12 @@ function paintBottles() {
         if(hero.health > 0 && level < maxLevels) {
             clearInterval(gameInterval);
             paintStage();
-            drawText("Level", '50px Impact, Charcoal, sans-serif', "white", gameCanvas.width/2 - 37, (gameCanvas.height/2)-70 );
-            drawText(level + 1, '55px Impact, Charcoal, sans-serif', "white", gameCanvas.width/2, gameCanvas.height/2 );
+            drawText("Level", '50px Piedral, sans-serif', "white", gameCanvas.width/2 - 37, (gameCanvas.height/2)-70 );
+            drawText(level + 1, '55px Piedra, sans-serif', "white", gameCanvas.width/2, gameCanvas.height/2 );
 
             setTimeout(function() {
                 bottlesAmount += 5;
+                bottlesSpeed +=1
                 addBottles(bottlesAmount);
                 level++;
                 addInterval();
@@ -235,6 +236,7 @@ function clearPlayerParameters() {
 
 function clearBottlesList() {
     bottlesList = [];
+    bottlesSpeed = 1;
     bottlesAmount = 5;
 }
 
