@@ -226,6 +226,7 @@ function clearPlayerParameters() {
 
     hero.health = hero.healthDefault;
     player.score = 0;
+    level = 1;
 
     $('#score').text(player.score);
     $('#health').text(hero.health);
@@ -243,6 +244,7 @@ function showBestScore() {
 
     console.log('Your score is: ' + player.score);
     console.log('Your best score is: ' + player.bestScore);
+    $('#best-score').text(0 + player.bestScore);
 }
 
 
