@@ -141,7 +141,7 @@ function paintBottles() {
         var bottlePositionY = bottlesList[index].positionY;
         var heroRange = bottlePositionX > hero.positionX - 50 && bottlePositionX < hero.positionX + 50;
 
-        drawRect(bottlePositionX, bottlePositionY, 20, 35, 'blue');
+        paintSingleBottle(bottlePositionX, bottlePositionY);
         moveBottle(index);
 
         if (bottlePositionY >= gameCanvas.height -65 && heroRange) {
@@ -167,7 +167,7 @@ function paintBottles() {
         if(hero.health > 0 && level < maxLevels) {
             clearInterval(gameInterval);
             paintStage();
-            drawText("Level", '50px Piedral, sans-serif', "white", gameCanvas.width/2 - 37, (gameCanvas.height/2)-70 );
+            drawText("Level", '50px Piedra, sans-serif', "white", gameCanvas.width/2 - 37, (gameCanvas.height/2)-70 );
             drawText(level + 1, '55px Piedra, sans-serif', "white", gameCanvas.width/2, gameCanvas.height/2 );
 
             setTimeout(function() {
@@ -182,6 +182,21 @@ function paintBottles() {
         else {
             return endGameButton()}
     }
+}
+
+function paintSingleBottle(bottlePositionX, bottlePositionY){
+    drawRect(bottlePositionX, bottlePositionY, 20, 35, '#5E5E5E');
+    drawRect(bottlePositionX-3, bottlePositionY-5, 26, 10, '#5E5E5E');
+    drawRect(bottlePositionX-2, bottlePositionY, 24, 10, '#5E5E5E');
+    drawRect(bottlePositionX-1, bottlePositionY+5, 22, 10, '#5E5E5E');
+    drawRect(bottlePositionX-2, bottlePositionY-10, 24, 4, 'white');
+
+    drawRect(bottlePositionX+1, bottlePositionY+1, 18, 33, '#FFE80D');
+    drawRect(bottlePositionX-2, bottlePositionY-4, 24, 10, '#FFE80D');
+    drawRect(bottlePositionX-1, bottlePositionY, 22, 10, '#FFE80D');
+    drawRect(bottlePositionX, bottlePositionY+5, 20, 10, '#FFE80D');
+    drawRect(bottlePositionX+6, bottlePositionY-2, 8, 35, '#FFF62B');
+    drawRect(bottlePositionX+8, bottlePositionY-2, 2, 35, '#FFF12B');
 }
 
 function moveBottle(elem) {
