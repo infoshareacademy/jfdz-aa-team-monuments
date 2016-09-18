@@ -10,7 +10,14 @@ body {
 	background-color: #1f2236;
 	box-shadow: rgba(13,11,11,0.3) 0 0 12px;
 	border-color: transparent;
+	transition: all 1s ease-in-out ;
 }
+
+.scroll-animated {
+	background-color: #454c77 !important;
+}
+
+
 
 .navbar-nav li.main-nav-item > a {
 	font-size: 16px;
@@ -107,6 +114,15 @@ body {
 	width: 141px;
 	display: inline-block;
 	margin-top: 3px;
+	transition: all 0.3s ease-in-out;
+
+
+}
+.logo-scroll-animated {
+	height: 37px;
+	width: 100px;
+	margin-top: 13px;
+	transition: all 0.3s ease-in-out;
 }
 
 /* Super Hyper Big Fat Teaser Image Style */
@@ -429,9 +445,19 @@ footer h4 a:hover {
 .container a:hover{
 	text-decoration: none;
 }
+
 .copyright {
 	text-align: center;
 	color: #52566e;
+
+}
+#easterEgg a{
+	color: #1f2236;
+	line-height: 15px;
+}
+
+#easterEgg a:hover{
+	color: #fff;
 }
 
 .cookies {
