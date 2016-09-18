@@ -44,6 +44,7 @@ canvas {
     -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
     -moz-box-shadow:    0px 1px 4px 0px rgba(0, 0, 0, 0.3);
     box-shadow:         0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
 .button {
@@ -93,6 +94,23 @@ canvas {
 }
 
 .game-results {
-    padding: 10px 3px 0 15px;
+    display: inline-block;
+    position: relative;
+    top: -10px;
+}
+
+.beer-pic {
+    background: url(../images/beer.svg) repeat-x;
+    width: 24px;
+    height: 26px;
+    margin: 0 0 3px 5px;
+    display: inline-block;
+}
+
+.health-pic {
+    background: url(../images/health.svg) repeat-x;
+    width: 25px;
+    height: 25px;
+    margin: 14px 0 0 10px;
     display: inline-block;
 }

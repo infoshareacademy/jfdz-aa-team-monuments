@@ -30,6 +30,7 @@ function initMenuScroll(){
 
 function initScrollBasedAnimations() {
     var $animationElement = $('.animation-element');
+    var $sliderElement = $('.teaser');
     var $window = $(window);
 
     function check_if_in_view() {
@@ -48,7 +49,23 @@ function initScrollBasedAnimations() {
                 (element_top_position <= window_bottom_position)) {
                 $element.addClass('animation-element-active');
             }
+
+            menuScrollAnimation();
+
         });
+    }
+
+    function menuScrollAnimation(){
+        if($window.scrollTop() > 400) {
+            $('.main-nav').addClass('scroll-animated');
+            $('.navbar-logo').addClass('logo-scroll-animated');
+        }
+
+        else{
+            $('.main-nav').removeClass('scroll-animated');
+            $('.navbar-logo').removeClass('logo-scroll-animated');
+        }
+
     }
 
     $window.on('scroll resize', check_if_in_view);
