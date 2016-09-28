@@ -249,21 +249,22 @@
 
                 <div class="col-md-6">
                     <h4>Gdańsk-letter</h4>
-                    <form action="" class="contact-form" method="get"> <!-- formularz z bajearmi-->
+                    <form action="http://tools.is-academy.pl/mailer.php" class="contact-form" method="post"> <!-- formularz z bajearmi-->
+                        <input type="hidden" name="receiver" value="kowalewski.luki@gmail.com">
                         <p class="form-text">Bądź na bieżąco z najciekawszymi wydarzeniami w Gdańsku - zapisz się!</p>
                         <div class="form-group form-inline" >
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-group form-field full-width">
                                         <span class="input-group-addon" id="user-name">Imię</span>
-                                        <input type="text" class="form-control locked" placeholder="Steve" aria-describedby="user-name" required disabled>
+                                        <input type="text" name="Imię" class="form-control locked" placeholder="Steve" aria-describedby="user-name" required disabled>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="input-group form-field full-width" >
                                         <span class="input-group-addon" id="user-email">Email</span>
-                                        <input type="email" class="form-control locked" placeholder="email@domain.com" aria-describedby="user-email" required disabled>
+                                        <input type="email" name="Email" class="form-control locked" placeholder="email@domain.com" aria-describedby="user-email" required disabled>
                                     </div>
                                 </div>
                             </div>

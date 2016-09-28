@@ -103,18 +103,26 @@ function initFormValidation() {
     });
 }
 
+function initFormSend(){
+    if (document.location.search.indexOf('mailerResult=sent') != -1) {
+        alert('Wiadomość została wysłana. Dziękujemy!');
+        document.location.href = './#';
+    };
+}
+
+
 $(document).ready(function () {
     initMenuToggle(); 
     initMenuScroll();
     initTeaserSwitch();
     initCookiesAlert();
     initFormValidation();
+    initFormSend();
     initScrollBasedAnimations();
 
-    $('.contact-form').submit(function(e) {
-        alert('no i poszedł spamik! ;) ');
-        e.preventDefault();
-
-    });
+  /*  $('.contact-form').submit(function(e) {
+      //  alert('no i poszedł spamik! ;) ');
+       // e.preventDefault();
+    });*/
 
 }); // Document Last Line  
