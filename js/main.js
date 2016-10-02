@@ -51,7 +51,6 @@ function initScrollBasedAnimations() {
             }
 
             menuScrollAnimation();
-
         });
     }
 
@@ -65,7 +64,6 @@ function initScrollBasedAnimations() {
             $('.main-nav').removeClass('scroll-animated');
             $('.navbar-logo').removeClass('logo-scroll-animated');
         }
-
     }
 
     $window.on('scroll resize', check_if_in_view);
@@ -110,8 +108,7 @@ function initFormSend(){
     };
 }
 
-
-// 
+//
 // $('#newsletter-submit').on('submit', function(e){
 //     e.preventDefault();
 //
@@ -135,9 +132,5 @@ $(document).ready(function () {
     initFormSend();
     initScrollBasedAnimations();
 
-  /*  $('.contact-form').submit(function(e) {
-      //  alert('no i poszedł spamik! ;) ');
-       // e.preventDefault();
-    });*/
 
 }); // Document Last Line  
