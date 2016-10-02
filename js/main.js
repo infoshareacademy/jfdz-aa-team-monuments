@@ -111,6 +111,21 @@ function initFormSend(){
 }
 
 
+// 
+// $('#newsletter-submit').on('submit', function(e){
+//     e.preventDefault();
+//
+//     $.ajax({
+//         url: 'http://tools.is-academy.pl/mailer.php',
+//         method: 'post',
+//         data: $( this ).serialize()
+//     })
+//         .always(function( msg ) {
+//           alert('wysłany');
+//         })
+// })
+
+
 $(document).ready(function () {
     initMenuToggle(); 
     initMenuScroll();
